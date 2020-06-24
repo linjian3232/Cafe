@@ -69,5 +69,4 @@
 	</bean>
 	<!-- 启用Spring事务注解 -->
 	<tx:annotation-driven transaction-manager="transactionManager"/>
-
 </beans>
