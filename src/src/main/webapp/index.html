@@ -1,908 +1,412 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="zxx">
+
 <head>
-<title>FoodeCart - Restaurants & Food Responsive HTML Template</title>
-<meta charset="utf-8">
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<title>主页</title>
+	<!-- Meta tag Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<meta name="keywords" content=""
+	/>
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
 
-<!-- Bootstrap CSS Link -->
-<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!--// Meta tag Keywords -->
 
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-<!-- Date Picker CSS Link -->
-<link rel="stylesheet" type="text/css" href="assets/css/bootstrap-datetimepicker.min.css">
-
-<!-- Font Awesome Icon CSS Link -->
-<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
-
-<!-- Slick Slider CSS Link -->
-<link rel="stylesheet" type="text/css" href="assets/css/slick.css">
-<link rel="stylesheet" type="text/css" href="assets/css/slick-theme.css">
-
-<!-- Wow Animation CSS Link -->
-<link rel="stylesheet" type="text/css" href="assets/css/animate.css">
-
-<!-- Main Style CSS Link -->
-<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<!-- Custom-Files -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Bootstrap-Core-CSS -->
+	<link rel="stylesheet" href="css/ken-burns.css" type="text/css" media="all" />
+	<!-- Banner CSS -->
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+	<!-- Style-CSS -->
+	<link rel="stylesheet" href="css/fontawesome-all.css">
+	<!-- Font-Awesome-Icons-CSS -->
+	<!-- //Custom-Files -->
+	<link rel="shortcut icon" href="images/favicon.ico">
+	<!-- Web-Fonts -->
+	<link href="http://fonts.googleapis.com/css?family=Arizonia&amp;subset=latin-ext" rel="stylesheet">
+	<link href="http://fonts.googleapis.com/css?family=Timmana&amp;subset=telugu" rel="stylesheet">
+	<link href="http://fonts.googleapis.com/css?family=Bellefair&amp;subset=hebrew,latin-ext" rel="stylesheet">
+	<!-- //Web-Fonts -->
 
 </head>
 
 <body>
+	<!-- header -->
+	<div class="header">
+		<!-- navigation -->
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<!-- logo -->
+			<h1>
+				<a class="navbar-brand" href="index.html">Coff-ood.
+					<span>Coffee And Food...</span>
+				</a>
+			</h1>
+			<!-- //logo -->
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+			    aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="index.html">主页
+							<span class="sr-only">(current)</span>
+						</a>
+					</li>
+					<li class="nav-item mx-lg-4">
+						<a class="nav-link" href="about.html">关于我们</a>
+					</li>
+					<li class="nav-item dropdown mr-lg-4">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+						    aria-expanded="false">
+							页面
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="menu.html">菜单</a>
+							<a class="dropdown-item scroll" href="#services">服务</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="about.html">团队</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="gallery.html">展廊</a>
+					</li>
+					<li class="nav-item mx-lg-4">
+						<a class="nav-link" href="menu.html">菜单</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="order.html">订单 </a>
+					</li>
+					<li class="nav-item  mx-lg-4">
+						<a class="nav-link" href="contact.html">个人信息</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="Sign in.html">登陆</a>
+					</li>
+					<li class="nav-item  mx-lg-4">
+						<a class="nav-link" href="Sign up.html">注册</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<!-- //navigation -->
+	</div>
+	<!-- //header -->
+	<!-- banner -->
+	<div class="banner">
+		<div id="carouselExampleControls" class="carousel kb_elastic animate_text kb_wrapper" data-ride="carousel" data-interval="6000"
+		    data-pause="hover">
+			<!-- Wrapper-for-Slides -->
+			<div class="carousel-inner" role="listbox">
+				<div class="carousel-item active">
+					<img src="images/banner.jpg" alt="" class="img-responsive" />
+					<div class="carousel-caption kb_caption">
+						<h4 data-animation="animated flipInX">Welcome to Coff-ood...</h4>
+						<h3 data-animation="animated flipInX" class="text-capitalize">Discover the taste of real coffee</h3>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="images/banner5.jpg" alt="" class="img-responsive" />
+					<div class="carousel-caption kb_caption">
+						<h4 data-animation="animated flipInX">Welcome to Coff-ood...</h4>
+						<h3 data-animation="animated flipInX" class="text-capitalize">Discover the taste of real coffee</h3>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="images/banner4.jpg" alt="" class="img-responsive" />
+					<div class="carousel-caption kb_caption kb_caption_right">
+						<h4 data-animation="animated flipInX">We Serve Delicious Food...</h4>
+						<h3 data-animation="animated flipInX" class="text-capitalize">Discover the taste of real coffee</h3>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="images/banner6.jpg" alt="" class="img-responsive" />
+					<div class="carousel-caption kb_caption kb_caption_right">
+						<h4 data-animation="animated flipInX">We Serve Delicious Food...</h4>
+						<h3 data-animation="animated flipInX" class="text-capitalize">Discover the taste of real coffee</h3>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="images/banner1.jpg" alt="" class="img-responsive" />
+					<div class="carousel-caption kb_caption kb_caption_center">
+						<h4 data-animation="animated flipInX">A real Italian cafe...</h4>
+						<h3 data-animation="animated flipInX" class="text-capitalize">Discover the taste of real coffee</h3>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="images/banner7.jpg" alt="" class="img-responsive" />
+					<div class="carousel-caption kb_caption kb_caption_center">
+						<h4 data-animation="animated flipInX">A real Italian cafe...</h4>
+						<h3 data-animation="animated flipInX" class="text-capitalize">Discover the taste of real coffee</h3>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="images/banner3.jpg" alt="" class="img-responsive" />
+					<div class="carousel-caption kb_caption">
+						<h4 data-animation="animated flipInX">Delicious food...you never eat before...</h4>
+						<h3 data-animation="animated flipInX" class="text-capitalize">Discover the taste of real coffee</h3>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="images/banner8.jpg" alt="" class="img-responsive" />
+					<div class="carousel-caption kb_caption">
+						<h4 data-animation="animated flipInX">Delicious food...you never eat before...</h4>
+						<h3 data-animation="animated flipInX" class="text-capitalize">Discover the taste of real coffee</h3>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="images/banner2.jpg" alt="" class="img-responsive" />
+					<div class="carousel-caption kb_caption kb_caption_right">
+						<h4 data-animation="animated flipInX">Enjoy ourselves...</h4>
+						<h3 data-animation="animated flipInX" class="text-capitalize">Discover the taste of real coffee</h3>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<img src="images/banner9.jpg" alt="" class="img-responsive" />
+					<div class="carousel-caption kb_caption kb_caption_right">
+						<h4 data-animation="animated flipInX">Enjoy ourselves...</h4>
+						<h3 data-animation="animated flipInX" class="text-capitalize">Discover the taste of real coffee</h3>
+					</div>
+				</div>
+			</div>
+			<a class="carousel-control-prev left kb_control_left" href="#carouselExampleControls" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next right kb_control_right" href="#carouselExampleControls" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			</a>
+		</div>
+	</div>
+	<!-- //banner -->
 
-<!-- Loader Start -->
-<div class="loader-box">
-	<div class="loader">
-	  <span></span>
-	  <span></span>
-	  <span></span>
-	</div>
-</div>
-<!-- Loader Start -->
 
-<!-- Header Start -->
-<header class="site-header">
-	<div class="container">
-		<div class="row">
-			<div class="col-8 col-md-3">
-				<!-- Logo Start -->
-				<div class="site-logo">
-					<a href="index.html" title="FoodeCart">
-						<img src="assets/images/logo.png" alt="Logo" class="non-sticky" />
-						<img src="assets/images/logo-black.png" alt="Logo" class="for-sticky" />
-					</a>
-				</div>
-				<!-- Logo End -->
+	<!-- about -->
+	<div class="about-section py-5">
+		<div class="container py-xl-5 py-lg-3">
+			<h5 class="tittle-w3 text-dark text-center mb-4">Welcome to Coff-ood</h5>
+			<div class="about-top text-center mb-5">
+				<h3 class="subheading-wthree mb-2">A Few Words About Us</h3>
+				<p class="para-w3l">咖啡馆不只是出售咖啡或是填饱肚子的场所，还是一种思想，一种生活方式，一种社交场所，一种哲学理念...
+				</p>
+				<p class="para-w3l">我觉得最美好的事情是，我在午后的咖啡馆的留言本上写下自己的愿望，有朝一日你也来到了这间咖啡馆，碰巧，你看到了我的愿望：有你...
+				</p>
+				<p class="para-w3l">想想夏日里的星空真实而美丽，咖啡馆里浪漫的情调，你我面对面坐着，你笑了，久违的笑，不矜持，天真而浪漫，真挚而坦诚...
+				</p>
 			</div>
-			<div class="col-4 col-md-9">
-				<!-- Menu Start -->
-				<div class="header-menu">
-					<!-- Navigation Menu Start -->
-					<nav class="main-navigation">
-						<button class="toggle-button">
-							<span></span>
-							<span></span>
-							<span></span>
-						</button>
-						<ul class="menu">
-							<li class="menu-item"><a href="index.html">Home</a></li>
-							<li class="menu-item"><a href="#about-us">About Us</a></li>
-							<li class="menu-item"><a href="#offer">Offer</a></li>
-							<li class="menu-item"><a href="#menu-food">Menu</a></li>
-							<li class="menu-item"><a href="#gallery">Gallery</a></li>
-							<li class="menu-item"><a href="#team">Team</a></li>
-							<li class="menu-item"><a href="#blog">Blog</a></li>
-							<li class="menu-item"><a href="#contact">Contact Us</a></li>
-							<li class="menu-item"><a href="javascript:void(0)" class="add-to-cart"><img src="assets/images/cart-icon.png" alt="Cart Icon" /></a></li>
-						</ul>
-						<div class="mobile-social-icon">
-							<div class="site-social-icon">
-								<a href="javascript:void(0)" title="Follow on Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-								<a href="javascript:void(0)" title="Follow on Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-								<a href="javascript:void(0)" title="Follow on Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-							</div>
-						</div>
-					</nav>
-					<!-- Navigation Menu End -->
-					<div class="black-shadow"></div>
+			<div class="row about-main">
+				<div class="col-lg-6 about-img">
+					<img src="images/insta1.jpg" alt="" class="img-fluid">
 				</div>
-				<!-- Menu End -->
+				<div class="col-lg-6 about-w3ls-right">
+					<h3 class="subheading-wthree mb-2">We are popular in</h3>
+					<p class="para-w3l">&emsp;&emsp;城市可以像个生命有机体，会不断产生出各种多元文化的小部落，Coff-ood便是这种小部落的聚合体，是知识、审美与生活的社交网络，也是互动场所。</p>
+					<ul class="list-unstyled">
+						<li class="mb-3 mt-4">
+							<i class="fas fa-hand-point-right mr-3"></i>引进巴西、秘鲁、摩卡、哥伦比亚等国家的上等咖啡原料，特色加工，风味独特，韵味绵长</li>
+						<li class="mb-3">
+							<i class="fas fa-hand-point-right mr-3"></i>集中西餐、中餐、日本料理于一家，菜式别具一格，独具特色</li>
+						<li class="mb-3">
+							<i class="fas fa-hand-point-right mr-3"></i>安静的场所，为您带来心灵的慰藉和生活创作的灵感，扫除一身的疲惫</i></li>
+						<li>
+							<i class="fas fa-hand-point-right mr-3"></i>为您营造完美的时尚娱乐空间、特色餐饮，温馨环境，周到服务，带给都市人韩商场林立的休闲体验</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 	</div>
-</header>
-<!-- Header End -->
+	<!--//about-->
 
-<!-- Banner Start -->
-<section class="main-banner" id="main-banner">
-	<div class="banner-slider">
-		<div class="banner-slide-box" style="background-image: url('assets/images/banner-img.jpg');"></div>
-		<div class="banner-slide-box" style="background-image: url('assets/images/banner-img2.jpg');"></div>
-		<div class="banner-slide-box" style="background-image: url('assets/images/banner-img3.jpg');"></div>
-		<div class="banner-slide-box" style="background-image: url('assets/images/banner-img4.jpg');"></div>
-	</div>
-	<span class="banner-shape" style="background-image: url('assets/images/banner-shape.png');"></span>
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-md-12 col-lg-11 col-xl-9">
-				<div class="banner-content">
-					<h1 class="h1-title wow flipInX">We Serve Delicious Food</h1>
-					<p>Mauris in odio id elit tristique gravida. Maecenas et felis dolor. Sed a bibendum tortor, quis eleifend tellus. Aenean blandit elementum dui at suscipit. Nulla libero diam, posuere ac dolor et, accumsan tincidunt enim. Nunc neque ipsum, consequat eget nulla non, pharetra porttitor nisi.</p>
-					<a href="javascript:void(0)" title="See Full Menu" class="sec-btn-transparent wow fadeInUp"><span>See Full Menu</span></a>
-				</div>
-			</div>
-		</div>
-		<div class="site-social-media">
-			<span>Follow Us</span>
-			<a href="javascript:void(0)" title="Follow on Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-			<a href="javascript:void(0)" title="Follow on Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-			<a href="javascript:void(0)" title="Follow on Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+	<!-- video play -->
+	<div class="about-bottom text-center py-5">
+		<div class="container py-xl-5 py-lg-3">
+			<p class="text-white">C o f f - o o d</p>
+			<h4 class="text-white mx-auto font-italic my-4">Relax And Slowly</h4>
 		</div>
 	</div>
-	<div class="scroll-down">
-		<a href="#about-us" title="Scroll To Down"><span></span><span></span></a>
-	</div>
-</section>
-<!-- Banner End -->
+	<!-- //video play -->
 
-<!-- Welcome To FoodeCart Start -->
-<section class="common-sec main-welcome" id="about-us">
-	<div class="element-top">
-		<img src="assets/images/element1.png" alt="Element Image" />
-	</div>
-	<div class="element-bottom">
-		<img src="assets/images/element2.png" alt="Element Image" />
-	</div>
-	<div class="container">
-		<div class="row justify-content-center align-items-center">
-			<div class="col-lg-6 col-md-8">
-				<div class="welcome-img wow fadeIn">
-					<img src="assets/images/welcome-img.png" alt="Welcome Image" />
-				</div>
+	<!-- middle section -->
+	<div class="section-middle">
+		<div class="d-flex">
+			<div class="col-md-6 left-gids-agile">
+				<i class="fas fa-coffee "></i>
+				<h4 class="bottom-title-w3ls text-dark my-4 pb-3">listen the life</h4>
+				<p>午后时光，走进街角的一家咖啡屋，喜欢坐在一个靠窗的位置。透过清晰透明的落地窗，可以慵懒地看着街道上过往匆匆的人们，却不被嘈杂的喧嚣声所围绕，取而代之的是优雅缓慢的轻音乐...</p>
 			</div>
-			<div class="col-lg-6 col-md-12">
-				<div class="welcome-content">
-					<h2 class="h2-title">Welcome To Foodecart</h2>
-					<p>Auris in nisl ultrices, placerat neque sit amet, iaculis enim. Duis efficitur, orci vitae pellentesque semper, eros massa pellentesque tortor, a fermentum justo lectus ac purus. Donec efficitur dignissim risus, non iaculis turpis dictum fusce euismod vitae nulla ut tristique.</p>
-					<p>Etiam eget urna dictum, egestas ex nec, dapibus ante. Duis at mi a magna aliquam accumsan. Proin metus velit, pulvinar a est sit amet, aliquam vehicula neque. Aliquam gravida urna ultricies, posuere erat in, scelerisque libero. Donec pretium nisi in tellus gravida rutrum.</p>
-					<a href="javascript:void(0)" title="Read More" class="sec-btn">Read More</a>
+			<div class="col-md-6 w3ls-right">
+				<div class="agile-width">
+					<h4 class="bottom-title-w3ls text-dark my-4 pb-3">smell the life</h4>
+					<p>走出咖啡馆，望着无际的蓝天，心情舒畅多了，不在那么，不再那么忧郁。买了枝粉色的鲜花，名叫百合，代表我此刻的心情...
+					</p>
+					<p>我想对于我来说最美好的事情也不过是我坐在一个咖啡馆喝咖啡，而你恰好就在我身后...
+					</p>
 				</div>
 			</div>
 		</div>
+		<img src="images/middle.png" alt="" class="img-fluid img-posi">
 	</div>
-</section>
-<!-- Welcome To FoodeCart End -->
+	<!-- //middle section -->
 
-<!-- Top Item’s We Have In Start -->
-<section class="main-top-items common-sec" id="offer">
-	<div class="element-top">
-		<img src="assets/images/element3.png" alt="Element Image" />
-	</div>
-	<div class="element-bottom">
-		<img src="assets/images/element4.png" alt="Element Image" />
-	</div>
-	<div class="container">
-		<div class="row">
-			<div class="col-12">
-				<div class="top-items-title">
-					<h2 class="h2-title gray-after-effect">Top Item’s We Have In</h2>
-				</div>
-				<div class="top-items-tabbing">
-					<div class="top-items-tab-list">
-						<ul class="nav nav-tabs" id="myTab" role="tablist">
-						  <li class="nav-item">
-							<a class="nav-link active" id="breakfast-tab" data-toggle="tab" href="#breakfast" role="tab" aria-controls="breakfast" aria-selected="true">
-								<span>
-									<span class="tab-icon">
-										<img src="assets/images/breakfast.png" class="tab-icon-active" alt="Breakfast Icon" />
-										<img src="assets/images/breakfast-white.png" class="tab-icon-hover" alt="Breakfast Icon" />
-									</span>
-									Breakfast
-								</span>
-							</a>
-						  </li>
-						  <li class="nav-item">
-							<a class="nav-link" id="lunch-tab" data-toggle="tab" href="#lunch" role="tab" aria-controls="lunch" aria-selected="false">
-								<span>
-									<span class="tab-icon">
-										<img src="assets/images/lunch.png" class="tab-icon-active" alt="Lunch Icon" />
-										<img src="assets/images/lunch-white.png" class="tab-icon-hover" alt="Lunch Icon" />
-									</span>
-									Lunch
-								</span>	
-							</a>
-						  </li>
-						  <li class="nav-item">
-							<a class="nav-link" id="dinner-tab" data-toggle="tab" href="#dinner" role="tab" aria-controls="dinner" aria-selected="false">
-								<span>
-									<span class="tab-icon">
-										<img src="assets/images/dinner.png" class="tab-icon-active" alt="Dinner Icon" />
-										<img src="assets/images/dinner-white.png" class="tab-icon-hover" alt="Dinner Icon" />
-									</span>
-									Dinner
-								</span>
-							</a>
-						  </li>
-						  <li class="nav-item">
-							<a class="nav-link" id="dessert-tab" data-toggle="tab" href="#dessert" role="tab" aria-controls="dessert" aria-selected="false">
-								<span>
-									<span class="tab-icon">
-										<img src="assets/images/dessert.png" alt="Dessert Icon" />
-										<img src="assets/images/dessert-white.png" class="tab-icon-hover" alt="Dessert Icon" />
-									</span>
-									Dessert
-								</span>
-							</a>
-						  </li>
-						</ul>
+	<!-- services -->
+	<div class="servies py-5" id="services">
+		<div class="container py-xl-5 py-lg-3">
+			<h5 class="tittle-w3 text-dark text-center mb-sm-5 mb-4">Services</h5>
+			<div class="d-flex skill_info_wthree_agile">
+				<div class="col-md-4 banner_bottom_left">
+					<div class="row">
+						<div class="col-3 banner_bottom_grid_left text-center mb-3">
+							<i class="fas fa-coffee"></i>
+						</div>
+						<div class="col-9 banner_bottom_grid_right mt-1 mb-4">
+							<h3>Coffee.</h3>
+						</div>
+						<p>&emsp;&emsp;有些年代的歌曲犹如一杯香醇的咖啡一般，咖啡豆的讲究，用心的磨出一杯饶有心思的coffee,习惯了不加糖，也不加奶，喜欢咖啡最原始的味道，虽然有些苦涩，入喉后感到的是一阵阵醇香扑鼻而来。
+</p>
 					</div>
-					<div class="tab-content top-items-tab-content" id="myTabContent">
-						<div class="tab-pane fade show active" id="breakfast" role="tabpanel" aria-labelledby="breakfast-tab">
-							<div class="row align-items-center">
-								<div class="col-lg-6 col-md-12 order-lg-1 order-2">
-									<div class="tab-content-text">
-										<h3 class="h3-title">Fried Egg & Pancake Topped With Bacon And Orange Juice</h3>
-										<p>Donec sed ante sit amet justo tempus convallis non congue enim. Curabitur laoreet pretium euismod. Curabitur pharetra enim dui, sit amet cursus arcu placerat vitae. Pellentesque habitant morbi tristique senectus.</p>
-										<p>Sed tincidunt erat in magna lacinia, vel feugiat purus porta. Pellentesque id lectus mauris. Cras ac rhoncus eros, non fringilla libero. Mauris eu purus eget odio hendrerit elementum. Pellentesque hendrerit fringilla velit, in imperdiet mi iaculis ut. Sed a gravida risus. Nam iaculis lorem a magna gravida consectetur.</p>
-									</div>
-								</div>
-								<div class="col-lg-6 col-md-12 order-lg-2 order-1">
-									<div class="tab-content-img-box wow fadeIn">
-										<div class="tab-content-img" style="background-image: url('assets/images/items-img.jpg');">
-										</div>
-										<div class="tab-content-img-off">
-											<p>50% Off</p>
-										</div>
-									</div>
-								</div>
-							</div>
+				</div>
+				<div class="col-md-4 banner_bottom_left text-center mt-md-0 mt-3 mb-md-0 mb-5">
+					<img src="images/service.png" alt="" class="img-fluid">
+					<div class="banner_bottom_grid_right mt-5 mb-2">
+						<h3>Environment.</h3>
+					</div>
+					<p>&emsp;&emsp;优雅的轻音乐，淡淡的咖啡香味，静谧的一方空间，总会让人留恋往返。</p>
+				</div>
+				<div class="col-md-4 banner_bottom_left">
+					<div class="row">
+						<div class="col-3 banner_bottom_grid_left text-center mb-3">
+							<i class="fas fa-glass-martini"></i>
 						</div>
-						<div class="tab-pane fade" id="lunch" role="tabpanel" aria-labelledby="lunch-tab">
-							<div class="row align-items-center">
-								<div class="col-lg-6 col-md-12 order-lg-1 order-2">
-									<div class="tab-content-text">
-										<h3 class="h3-title">Traditional Shrimp Thai Dish</h3>
-										<p>Donec sed ante sit amet justo tempus convallis non congue enim. Curabitur laoreet pretium euismod. Curabitur pharetra enim dui, sit amet cursus arcu placerat vitae. Pellentesque habitant morbi tristique senectus.</p>
-										<p>Sed tincidunt erat in magna lacinia, vel feugiat purus porta. Pellentesque id lectus mauris. Cras ac rhoncus eros, non fringilla libero. Mauris eu purus eget odio hendrerit elementum. Pellentesque hendrerit fringilla velit, in imperdiet mi iaculis ut. Sed a gravida risus. Nam iaculis lorem a magna gravida consectetur.</p>
-									</div>
-								</div>
-								<div class="col-lg-6 col-md-12 order-lg-2 order-1">
-									<div class="tab-content-img-box">
-										<div class="tab-content-img" style="background-image: url('assets/images/items-img2.jpg');">
-										</div>
-										<div class="tab-content-img-off">
-											<p>38% Off</p>
-										</div>
-									</div>
-								</div>
-							</div>
+						<div class="col-9 banner_bottom_grid_right mt-1 mb-4">
+							<h3>Food.</h3>
 						</div>
-						<div class="tab-pane fade" id="dinner" role="tabpanel" aria-labelledby="dinner-tab">
-							<div class="row align-items-center">
-								<div class="col-lg-6 col-md-12 order-lg-1 order-2">
-									<div class="tab-content-text">
-										<h3 class="h3-title">Traditional Indonesian Dish</h3>
-										<p>Donec sed ante sit amet justo tempus convallis non congue enim. Curabitur laoreet pretium euismod. Curabitur pharetra enim dui, sit amet cursus arcu placerat vitae. Pellentesque habitant morbi tristique senectus.</p>
-										<p>Sed tincidunt erat in magna lacinia, vel feugiat purus porta. Pellentesque id lectus mauris. Cras ac rhoncus eros, non fringilla libero. Mauris eu purus eget odio hendrerit elementum. Pellentesque hendrerit fringilla velit, in imperdiet mi iaculis ut. Sed a gravida risus. Nam iaculis lorem a magna gravida consectetur.</p>
-									</div>
-								</div>
-								<div class="col-lg-6 col-md-12 order-lg-2 order-1">
-									<div class="tab-content-img-box">
-										<div class="tab-content-img" style="background-image: url('assets/images/items-img3.jpg');">
-										</div>
-										<div class="tab-content-img-off">
-											<p>55% Off</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="tab-pane fade" id="dessert" role="tabpanel" aria-labelledby="dessert-tab">
-							<div class="row align-items-center">
-								<div class="col-lg-6 col-md-12 order-lg-1 order-2">
-									<div class="tab-content-text">
-										<h3 class="h3-title">Cupcake, Cheesecake & Sweet Bread</h3>
-										<p>Donec sed ante sit amet justo tempus convallis non congue enim. Curabitur laoreet pretium euismod. Curabitur pharetra enim dui, sit amet cursus arcu placerat vitae. Pellentesque habitant morbi tristique senectus.</p>
-										<p>Sed tincidunt erat in magna lacinia, vel feugiat purus porta. Pellentesque id lectus mauris. Cras ac rhoncus eros, non fringilla libero. Mauris eu purus eget odio hendrerit elementum. Pellentesque hendrerit fringilla velit, in imperdiet mi iaculis ut. Sed a gravida risus. Nam iaculis lorem a magna gravida consectetur.</p>
-									</div>
-								</div>
-								<div class="col-lg-6 col-md-12 order-lg-2 order-1">
-									<div class="tab-content-img-box">
-										<div class="tab-content-img" style="background-image: url('assets/images/items-img4.jpg');">
-										</div>
-										<div class="tab-content-img-off">
-											<p>30% Off</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
+						<p>&emsp;&emsp;极致的美食，总是藏在恰当的季节里，不早不晚地出现。有些美味不过一早一晚，滋味便大打折扣，过了时节再吃，已有隔世之感......</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</section>
-<!-- Top Item’s We Have In End -->
+	<!-- //services -->
 
-<!-- Our Food Menu Start -->
-<section class="main-food common-sec" id="menu-food">
-	<div class="element-top">
-		<img src="assets/images/element5.png" alt="Element Image" />
-	</div>
-	<div class="element-bottom">
-		<img src="assets/images/element6.png" alt="Element Image" />
-	</div>
-	<div class="container">
-		<div class="row">
-			<div class="col-12">
-				<div class="food-title">
-					<h2 class="h2-title">Our Food Menu</h2>
-				</div>
-			</div>
-		</div>
-		<div class="main-menu-list">
-			<div class="row">
-				<div class="col-lg-6 col-md-12">
-					<div class="food-menu-box">
-						<h3 class="h3-title">Main Course</h3>
-						<div class="food-list-box">
-							<div class="food-list">
-								<h5 class="food-name">Super-Delicious Zuppa Toscana</h5>
-								<p class="food-price">$40</p>
-							</div>
-							<div class="food-types">
-								<ul>
-									<li>Chicken</li>
-									<li>Italian</li>
-									<li>Sausage</li>
-									<li>Spinach</li>
-								</ul>
-							</div>
-						</div>
-						<div class="food-list-box">
-							<div class="food-list">
-								<h5 class="food-name">Bacon Coil Baked Australian Beef</h5>
-								<p class="food-price">$40</p>
-							</div>
-							<div class="food-types">
-								<ul>
-									<li>Chicken</li>
-									<li>Italian</li>
-									<li>Sausage</li>
-									<li>Spinach</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-6 col-md-12">
-					<div class="food-menu-box">
-						<h3 class="h3-title">Soups & Salads</h3>
-						<div class="food-list-box">
-							<div class="food-list">
-								<h5 class="food-name">Salat Banana Flower</h5>
-								<p class="food-price">$40</p>
-							</div>
-							<div class="food-types">
-								<ul>
-									<li>Chicken</li>
-									<li>Italian</li>
-									<li>Sausage</li>
-									<li>Spinach</li>
-								</ul>
-							</div>
-						</div>
-						<div class="food-list-box">
-							<div class="food-list">
-								<h5 class="food-name">Gourmet Mushroom Risotto</h5>
-								<p class="food-price">$40</p>
-							</div>
-							<div class="food-types">
-								<ul>
-									<li>Chicken</li>
-									<li>Italian</li>
-									<li>Sausage</li>
-									<li>Spinach</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-6 col-md-12">
-					<div class="food-menu-box">
-						<h3 class="h3-title">Desserts</h3>
-						<div class="food-list-box">
-							<div class="food-list">
-								<h5 class="food-name">Ice Cream Tarte Apple</h5>
-								<p class="food-price">$40</p>
-							</div>
-							<div class="food-types">
-								<ul>
-									<li>Apple</li>
-									<li>Italian</li>
-									<li>Milk</li>
-									<li>Fruit</li>
-								</ul>
-							</div>
-						</div>
-						<div class="food-list-box">
-							<div class="food-list">
-								<h5 class="food-name">Fruit ‘Mille Feuille’</h5>
-								<p class="food-price">$40</p>
-							</div>
-							<div class="food-types">
-								<ul>
-									<li>Apple</li>
-									<li>Italian</li>
-									<li>Milk</li>
-									<li>Fruit</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-6 col-md-12">
-					<div class="food-menu-box">
-						<h3 class="h3-title">Drinks</h3>
-						<div class="food-list-box">
-							<div class="food-list">
-								<h5 class="food-name">Double Chocolate Shake</h5>
-								<p class="food-price">$40</p>
-							</div>
-							<div class="food-types">
-								<ul>
-									<li>Ice</li>
-									<li>Italian</li>
-									<li>Fruit</li>
-									<li>Chocolate</li>
-								</ul>
-							</div>
-						</div>
-						<div class="food-list-box">
-							<div class="food-list">
-								<h5 class="food-name">All Fruit Milk Shake</h5>
-								<p class="food-price">$40</p>
-							</div>
-							<div class="food-types">
-								<ul>
-									<li>Ice</li>
-									<li>Italian</li>
-									<li>Fruit</li>
-									<li>Chocolate</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- Our Food Menu End -->
-
-<!-- Instagram Image Slider Start -->
-<div class="main-instagram common-sec" id="gallery">
-	<div class="instagram-slider">
-		<div class="instagram-slide-box">
-			<div class="instagram-slide-img" style="background-image: url('assets/images/insta-img1.jpg');"></div>
-			<i class="fa fa-instagram" aria-hidden="true"></i>
-		</div>
-		<div class="instagram-slide-box">
-			<div class="instagram-slide-img" style="background-image: url('assets/images/insta-img2.jpg');"></div>
-			<i class="fa fa-instagram" aria-hidden="true"></i>
-		</div>
-		<div class="instagram-slide-box">
-			<div class="instagram-slide-img" style="background-image: url('assets/images/insta-img3.jpg');"></div>
-			<i class="fa fa-instagram" aria-hidden="true"></i>
-		</div>
-		<div class="instagram-slide-box">
-			<div class="instagram-slide-img" style="background-image: url('assets/images/insta-img4.jpg');"></div>
-			<i class="fa fa-instagram" aria-hidden="true"></i>
-		</div>
-		<div class="instagram-slide-box">
-			<div class="instagram-slide-img" style="background-image: url('assets/images/insta-img5.jpg');"></div>
-			<i class="fa fa-instagram" aria-hidden="true"></i>
-		</div>
-		<div class="instagram-slide-box">
-			<div class="instagram-slide-img" style="background-image: url('assets/images/insta-img6.jpg');"></div>
-			<i class="fa fa-instagram" aria-hidden="true"></i>
-		</div>
-		<div class="instagram-slide-box">
-			<div class="instagram-slide-img" style="background-image: url('assets/images/insta-img7.jpg');"></div>
-			<i class="fa fa-instagram" aria-hidden="true"></i>
-		</div>
-	</div>
-</div>
-<!-- Instagram Image Slider End -->
-
-<!-- Our Chefs Start -->
-<section class="main-chefs common-sec" id="team">
-	<div class="element-top">
-		<img src="assets/images/element7.png" alt="Element Image" />
-	</div>
-	<div class="element-bottom">
-		<img src="assets/images/element8.png" alt="Element Image" />
-	</div>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="chefs-title">
-					<h2 class="h2-title">Our Chefs</h2>
-				</div>
-			</div>
-		</div>
-		<div class="chefs-info">
-			<div class="row chefs-slider">
-				<div class="col-md-4">
-					<div class="chef-info-box">
-						<div class="chef-img-box">
-							<div class="chef-img" style="background-image: url('assets/images/chef-img1.jpg');"></div>
-						</div>
-						<div class="chef-detail">
-							<div class="chef-name">
-								<h3 class="h3-title">Joella Smith</h3>
-								<p class="chef-position">Co - Chef</p>
-							</div>
-							<div class="chef-social-info">
-								<a href="javascript:void(0)" title="Follow on Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-								<a href="javascript:void(0)" title="Follow on Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-								<a href="javascript:void(0)" title="Follow on Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="chef-info-box">
-						<div class="chef-img-box">
-							<div class="chef-img" style="background-image: url('assets/images/chef-img2.jpg');"></div>
-						</div>
-						<div class="chef-detail">
-							<div class="chef-name">
-								<h3 class="h3-title">Jordan Peter</h3>
-								<p class="chef-position">Co - Chef</p>
-							</div>
-							<div class="chef-social-info">
-								<a href="javascript:void(0)" title="Follow on Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-								<a href="javascript:void(0)" title="Follow on Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-								<a href="javascript:void(0)" title="Follow on Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="chef-info-box">
-						<div class="chef-img-box">
-							<div class="chef-img" style="background-image: url('assets/images/chef-img3.jpg');"></div>
-						</div>
-						<div class="chef-detail">
-							<div class="chef-name">
-								<h3 class="h3-title">Zoe Drew</h3>
-								<p class="chef-position">Co - Chef</p>
-							</div>
-							<div class="chef-social-info">
-								<a href="javascript:void(0)" title="Follow on Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-								<a href="javascript:void(0)" title="Follow on Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-								<a href="javascript:void(0)" title="Follow on Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="chef-info-box">
-						<div class="chef-img-box">
-							<div class="chef-img" style="background-image: url('assets/images/chef-img4.jpg');"></div>
-						</div>
-						<div class="chef-detail">
-							<div class="chef-name">
-								<h3 class="h3-title">Jordan Peter</h3>
-								<p class="chef-position">Co - Chef</p>
-							</div>
-							<div class="chef-social-info">
-								<a href="javascript:void(0)" title="Follow on Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-								<a href="javascript:void(0)" title="Follow on Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-								<a href="javascript:void(0)" title="Follow on Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- Our Chefs End -->
-
-<!-- Testimonial - What Our Clients Say’s Start -->
-<section class="main-testimonial common-sec">
-	<div class="element-top">
-		<img src="assets/images/element9.png" alt="Element Image" />
-	</div>
-	<div class="element-bottom">
-		<img src="assets/images/element10.png" alt="Element Image" />
-	</div>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="testimonial-title">
-					<h2 class="h2-title gray-after-effect">What Our Clients Say’s</h2>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-12">
-				<div class="testimonial-slider">
-					<div class="testimonial-box" style="background-image: url('assets/images/testimonial-back.jpg');">
-						<div class="client-review">
-							<ul>
-								<li><i class="fa fa-star" aria-hidden="true"></i></li>
-								<li><i class="fa fa-star" aria-hidden="true"></i></li>
-								<li><i class="fa fa-star" aria-hidden="true"></i></li>
-								<li><i class="fa fa-star" aria-hidden="true"></i></li>
-								<li><i class="fa fa-star" aria-hidden="true"></i></li>
-							</ul>
-						</div>
-						<div class="client-comments">
-							<p>Duis diam nunc, venenatis sit amet nibh vel, imperdiet blandit risus. Pellentesque pretium, tortor vel consequat consequat, nibh est pretium ante, quis fermentum augue tellus sit amet augue. Morbi nec maximus mauris.</p>
-						</div>
-						<div class="client-info">
-							<div class="client-img" style="background-image: url('assets/images/client-img.jpg');"></div>
-							<h6 class="client-name">Jon Bondic</h6>
-							<span class="clinet-position">Author</span>
-						</div>
-					</div>
-					<div class="testimonial-box" style="background-image: url('assets/images/testimonial-back.jpg');">
-						<div class="client-review">
-							<ul>
-								<li><i class="fa fa-star" aria-hidden="true"></i></li>
-								<li><i class="fa fa-star" aria-hidden="true"></i></li>
-								<li><i class="fa fa-star" aria-hidden="true"></i></li>
-								<li><i class="fa fa-star" aria-hidden="true"></i></li>
-								<li><i class="fa fa-star" aria-hidden="true"></i></li>
-							</ul>
-						</div>
-						<div class="client-comments">
-							<p>Duis diam nunc, venenatis sit amet nibh vel, imperdiet blandit risus. Pellentesque pretium, tortor vel consequat consequat, nibh est pretium ante, quis fermentum augue tellus sit amet augue. Morbi nec maximus mauris.</p>
-						</div>
-						<div class="client-info">
-							<div class="client-img" style="background-image: url('assets/images/client-img2.jpg');"></div>
-							<h6 class="client-name">Jon Bondic</h6>
-							<span class="clinet-position">Author</span>
-						</div>
-					</div>
-					<div class="testimonial-box" style="background-image: url('assets/images/testimonial-back.jpg');">
-						<div class="client-review">
-							<ul>
-								<li><i class="fa fa-star" aria-hidden="true"></i></li>
-								<li><i class="fa fa-star" aria-hidden="true"></i></li>
-								<li><i class="fa fa-star" aria-hidden="true"></i></li>
-								<li><i class="fa fa-star" aria-hidden="true"></i></li>
-								<li><i class="fa fa-star" aria-hidden="true"></i></li>
-							</ul>
-						</div>
-						<div class="client-comments">
-							<p>Duis diam nunc, venenatis sit amet nibh vel, imperdiet blandit risus. Pellentesque pretium, tortor vel consequat consequat, nibh est pretium ante, quis fermentum augue tellus sit amet augue. Morbi nec maximus mauris.</p>
-						</div>
-						<div class="client-info">
-							<div class="client-img" style="background-image: url('assets/images/client-img3.jpg');"></div>
-							<h6 class="client-name">Jon Bondic</h6>
-							<span class="clinet-position">Author</span>
-						</div>
-					</div>
-					<div class="testimonial-box" style="background-image: url('assets/images/testimonial-back.jpg');">
-						<div class="client-review">
-							<ul>
-								<li><i class="fa fa-star" aria-hidden="true"></i></li>
-								<li><i class="fa fa-star" aria-hidden="true"></i></li>
-								<li><i class="fa fa-star" aria-hidden="true"></i></li>
-								<li><i class="fa fa-star" aria-hidden="true"></i></li>
-								<li><i class="fa fa-star" aria-hidden="true"></i></li>
-							</ul>
-						</div>
-						<div class="client-comments">
-							<p>Duis diam nunc, venenatis sit amet nibh vel, imperdiet blandit risus. Pellentesque pretium, tortor vel consequat consequat, nibh est pretium ante, quis fermentum augue tellus sit amet augue. Morbi nec maximus mauris.</p>
-						</div>
-						<div class="client-info">
-							<div class="client-img" style="background-image: url('assets/images/client-img4.jpg');"></div>
-							<h6 class="client-name">Jon Bondic</h6>
-							<span class="clinet-position">Author</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- Testimonial - What Our Clients Say’s End -->
-
-<!-- Our Blog Start -->
-<section class="main-blog common-sec" id="blog">
-	<div class="element-top">
-		<img src="assets/images/element11.png" alt="Element Image" />
-	</div>
-	<div class="element-bottom">
-		<img src="assets/images/element12.png" alt="Element Image" />
-	</div>
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="blog-title">
-					<h2 class="h2-title">Our Blog</h2>
-				</div>
-			</div>
-		</div>
-		<div class="main-post">
-			<div class="row blog-slider">
-				<div class="col-md-4">
-					<div class="blog-post">
-						<div class="post-img-box">
-							<div class="post-img" style="background-image: url('assets/images/post-img1.jpg');"></div>
-						</div>
-						<div class="post-content">
-							<span class="post-date">March 7, 2018</span>
-							<h5 class="post-title">Aenean magna, a lobortis mauris vehicula sed.</h5>
-							<div class="post-description">
-								<p>Donec condimentum tristique porta. Varius neque risus, a congue augue viverra id publishing software.</p>
-							</div>
-							<a href="javascript:void(0)" title="Read More">Read More <span><img src="assets/images/arrow-right.png" alt="Arrow" /></span></a>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="blog-post">
-						<div class="post-img-box">
-							<div class="post-img" style="background-image: url('assets/images/post-img2.jpg');"></div>
-						</div>
-						<div class="post-content">
-							<span class="post-date">March 7, 2018</span>
-							<h5 class="post-title">Vehicula magna, a lobortis mauris vehicula sed.</h5>
-							<div class="post-description">
-								<p>Donec condimentum tristique porta. Varius neque risus, a congue augue viverra id publishing software.</p>
-							</div>
-							<a href="javascript:void(0)" title="Read More">Read More <span><img src="assets/images/arrow-right.png" alt="Arrow" /></span></a>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-4">
-					<div class="blog-post">
-						<div class="post-img-box">
-							<div class="post-img" style="background-image: url('assets/images/insta-img4.jpg');"></div>
-						</div>
-						<div class="post-content">
-							<span class="post-date">March 7, 2018</span>
-							<h5 class="post-title">Mauris magna, a lobortis mauris vehicula sed.</h5>
-							<div class="post-description">
-								<p>Donec condimentum tristique porta. Varius neque risus, a congue augue viverra id publishing software.</p>
-							</div>
-							<a href="javascript:void(0)" title="Read More">Read More <span><img src="assets/images/arrow-right.png" alt="Arrow" /></span></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- Our Blog End -->
-
-<!-- Footer Start -->
-<footer class="site-footer" id="contact" style="background-image: url('assets/images/footer-back.jpg');">
-	<div class="container">
-		<div class="row">
-			<div class="col-xl-6 col-lg-8 col-md-12">
-				<div class="footer-contact">
-					<h2 class="h2-title">Book Your Table</h2>
-					<div class="contact-form">
-						<form method="post">
-							<div class="row">
-								<div class="col-md-4">
-									<div class="form-box">
-										<input type="text" name="date" placeholder="Date" class="form-input" required id="datepicker">
-										<span class="input-icon"><img src="assets/images/icon-calendar.png" alt="Input Icon" /></span>
-									</div>
-								</div>
-								<div class="col-md-4">
-									<div class="form-box">
-										<input type="text" name="time" placeholder="Time" class="form-input" required id="timepicker">
-										<span class="input-icon"><img src="assets/images/icon-time.png" alt="Input Icon" /></span>
-									</div>
-								</div>
-								<div class="col-md-4">
-									<div class="form-box">
-										<input type="text" name="guest" placeholder="No. of Guest" class="form-input" required>
-										<span class="input-icon"><img src="assets/images/icon-guest.png" alt="Input Icon" /></span>
-									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="form-box">
-										<input type="text" name="name" placeholder="Your Name" class="form-input" required>
-										<span class="input-icon"><img src="assets/images/icon-user.png" alt="Input Icon" /></span>
-									</div>
-								</div>
-								<div class="col-md-6">
-									<div class="form-box">
-										<input type="email" name="email" placeholder="Your Email" class="form-input">
-										<span class="input-icon"><img src="assets/images/icon-mail.png" alt="Input Icon" /></span>
-									</div>
-								</div>
-								<div class="col-md-12">
-									<div class="submit-btn">
-										<button type="submit" class="sec-btn">Submit Now</button>
-									</div>
-								</div>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="footer-info">
-		<div class="footer-info-img" style="background-image: url('assets/images/footer-back.jpg');"></div>
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-2 col-12 pr-lg-0">
-					<div class="footer-logo">
-						<a href="index.html" title="FoodeCart"><img src="assets/images/logo.png" alt="Logo" /></a>
-					</div>
-					<div class="site-social-icon">
-						<a href="javascript:void(0)" title="Follow on Facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-						<a href="javascript:void(0)" title="Follow on Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-						<a href="javascript:void(0)" title="Follow on Instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-					</div>
-				</div>
-				<div class="col-lg-7 col-12">
-					<div class="footer-content">
-						<div class="footer-menu">
-							<ul>
-								<li><a href="#about-us">About Us</a></li>
-								<li><a href="#offer">Offer</a></li>
-								<li><a href="#menu-food">Menu</a></li>
-								<li><a href="#gallery">Gallery</a></li>
-								<li><a href="#team">Team</a></li>
-								<li><a href="#blog">Blog</a></li>
-								<li><a href="#contact">Contact Us</a></li>
-							</ul>
-						</div>
-						<p>Nunc a cursus quam, at volutpat tortor. Quisque non sapien non magna varius rhoncus. Nulla at turpis sem. Suspendisse cursus nulla vestibulum enim luctus, vel placerat mauris fermentum. Proin at velit in nibh semper efficitur. Suspendisse sodales elit libero, eget venenatis nibh rhoncus nec.Phasellus auctor velit purus. Morbi bibendum pharetra nunc quis semper.</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-12">
-					<div class="subscribe-form">
-						<h4>Subscribe Now!</h4>
-						<form>
-							<div class="form-box">
-								<input type="email" name="subscribe_email" placeholder="Your Email" class="form-input" required>
-								<button type="submit" id="send"><i class="fa fa-send" aria-hidden="true"></i></button>
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="footer-bottom">
-			<div class="container">
+	<!-- footer -->
+	<footer>
+		<div class="w3ls-footer-grids py-5">
+			<div class="container py-lg-2">
 				<div class="row">
-					<div class="col-12">
-						<div class="copy-right">
-							<p>Copyright &copy; 2020.Company name All rights reserved.</p>
-							<p><a target="_blank" href="http://www.beian.miit.gov.cn/">沪ICP备20018295号</a></p>
-						<p><img style="width: auto" src="assets/images/beian.png"/>
-							<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011302006127">
-						沪公网安备 31011302006127号</a></p>
-							</div>
+					<div class="col-lg-3 col-sm-6 w3l-footer one">
+						<h2 class="index.html mb-3">Coff-ood</h2>
+						<p>生活应该如此，像咖啡一样，累积沉淀，快速反应，延续热情...</p>
+						<div class="clearfix"></div>
+					</div>
+					<div class="col-lg-2 col-sm-6 w3l-footer agileinfo_footer_grid my-sm-0 my-4">
+						<h3 class="mb-3">Navigation</h3>
+						<div class="nav-w3-l">
+							<ul class="list-unstyled">
+								<li class="mb-2">
+									<a href="index.html">主页</a>
+								</li>
+								<li class="mb-2">
+									<a href="about.html" class="">关于我们</a>
+								</li>
+								<li class="mb-2">
+									<a href="menu.html" class="">菜单</a>
+								</li>
+								<li class="mb-2">
+									<a href="gallery.html" class="">展廊</a>
+								</li>
+								<li class="mb-2">
+									<a href="contact.html" class="">个人信息</a>
+								</li>
+								<li class="mb-2">
+									<a href="order.html" class="">订单</a>
+								</li>
+								<li class="mb-2">
+									<a href="Sign up.html" class="">注册</a>
+								</li>
+								<li>
+									<a href="Sign in.html" class="">登陆</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-3 col-sm-6 w3l-footer two mt-lg-0 mt-sm-5">
+						<h3 class="mb-3">Connect With</h3>
+						<ul class="list-unstyled">
+							<li class="mb-3">
+								<a class="fb" href="#">
+									<i class="fab fa-facebook-f"></i>Like us on Facebook</a>
+							</li>
+							<li class="mb-3">
+								<a class="fb1" href="#">
+									<i class="fab fa-twitter"></i>Follow us on Twitter</a>
+							</li>
+							<li class="mb-3">
+								<a class="fb2" href="#">
+									<i class="fab fa-google-plus-g"></i>Add us on Google Plus</a>
+							</li>
+							<li>
+								<a class="fb3" href="#">
+									<i class="fab fa-dribbble"></i>Follow us on Dribbble</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-lg-4 col-sm-6 w3l-footer three mt-lg-0 mt-4">
+						<h3 class="mb-3">Address</h3>
+						<ul class="list-unstyled">
+							<li>
+								<i class="fas fa-map-marker"></i>
+								<p>福建省厦门市思明区
+									厦大学生公寓</p>
+								<div class="clearfix"></div>
+							</li>
+							<li class="my-2">
+								<i class="fas fa-phone"></i>
+								<p>1234567890</p>
+								<div class="clearfix"></div>
+							</li>
+							<li>
+								<i class="fas fa-envelope"></i>
+								<a href="mailto:info@example.com">mail@stu.xmu.edu.cn</a>
+								<div class="clearfix"></div>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</footer>
-<!-- Footer End -->
-
-<!-- Scroll To Top Start -->
-<a href="#main-banner" class="scroll-top" id="scroll-top"><span><i class="fa fa-angle-double-up" aria-hidden="true"></i></span></a>
-<!-- Scroll To Top End -->
+	</footer>
+	<!-- //footer -->
 
 
-<!-- Jquery JS Link -->
-<script src="assets/js/jquery.min.js"></script>
+	<!-- Js files -->
+	<!-- JavaScript -->
+	<script src="js/jquery-2.2.3.min.js"></script>
+	<!-- Default-JavaScript-File -->
+	<script src="js/bootstrap.js"></script>
+	<!-- Necessary-JavaScript-File-For-Bootstrap -->
 
-<!-- Bootstrap JS Link -->
-<script src="assets/js/bootstrap.min.js"></script>
+	<!-- smooth scrolling -->
+	<script src="js/SmoothScroll.min.js"></script>
+	<!-- //smooth scrolling -->
 
-<!-- Date Picker JS Link -->
-<script src="assets/js/moment.min.js"></script>
-<script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+	<!-- move-top -->
+	<script src="js/move-top.js"></script>
+	<!-- easing -->
+	<script src="js/easing.js"></script>
+	<!--  necessary snippets for few javascript files -->
+	<script src="js/coffee.js"></script>
 
-<!-- Slick Slider JS Link -->
-<script src="assets/js/slick.min.js"></script>
-
-<!-- Wow Animation JS Link -->
-<script src="assets/js/wow.min.js"></script>	
-
-<!-- Custom JS Link -->
-<script src="assets/js/custom.js"></script>
+	<!-- //Js files -->
 
 </body>
+
 </html>
