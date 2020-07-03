@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="zxx">
-
+<link rel="shortcut icon" href="images/favicon.ico">
+	
 <head>
 	   <style>
 		   #bc
 		   {
-			   background-image: url("Img/5.jpg");
+			   background-image: url("images/4.jpg");
 			   
 		   }
 		   #bc1
 		   {
-			    background-image: url("Img/6.jpg");
+			    background-image: url("images/8.jpg");
 		   }
         *{
             margin: 0px;
@@ -18,7 +19,7 @@
             box-sizing: border-box;
         }
         body{
-            background: url("moban3207/images/banner1.jpg") no-repeat center;
+            background: url("images/banner1.jpg") no-repeat center;
         }
         .rg_layout{
             width: 900px;
@@ -44,7 +45,7 @@
             size: 20px;
         }
         .rg_center{
-            width: 450px;
+            width: 550px;
 
             /* border: 1px solid red; */
             float: left;
@@ -54,7 +55,7 @@
             float: right;
         }
         .rg_right p:first-child{
-            /* color: #a6a6a6; */
+            color: white; 
             font-size: 15px;
         }
         .rg_right p a{
@@ -64,16 +65,16 @@
             width: 100px;
             text-align: right;
             height: 45px;
-            color: #a6a6a6;
+            color: white;
         }
         .td_right{
             padding-left: 50px;
-            color: #a6a6a6;
+            color:white;
         }
-        #username,#password,#email,#name,#tel,#birthday{
+        #username,#password,#name,#tel,#birthday,#password2{
             width: 251px;
             height: 32px;
-            border: 1px solid #a6a6a6;
+            border: 1px solid white;
             /* 设置边框圆角 */
             border-radius: 5px;
             padding-left: 10px;
@@ -97,15 +98,180 @@
             height: 40px;
             background-color: #ffd026;
             border: 1px solid #a6a6a6;
+			border-radius: 5px;
+            padding-left: 10px;
+			
         }
+		   #btn_res
+		   {
+			width: 80px;
+            height: 40px;
+            background-color:aliceblue;
+            border: 1px solid #a6a6a6;
+			    border-radius: 5px;
+            padding-left: 10px;
+		   }
     </style>
-	<title>Sign up</title>
+	<title>欢迎注册</title>
 	<!-- Meta tag Keywords -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8" />
 	<meta name="keywords" content=""
 	/>
 	<script>
+		function a(){location.href='index.html';}
+		function validate_username(username){
+
+  		//定义正则表达式的变量:邮箱正则
+
+  		var emailReg=/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+
+  		//console.log(username);
+
+  		if(username !="" && username.search(emailReg) != -1)
+
+  		{
+
+  			document.getElementById("test_user").innerHTML = "<font color='#CCFF99' size='3px'>√邮箱格式正确</font>";
+
+  		}else{
+
+  			document.getElementById("test_user").innerHTML = "<font color='red' size='3px'>邮箱格式错误</font>";
+
+  		}
+
+  	}
+
+  
+
+ 	//函数2：验证密码是否符合要求：匹配6位密码，由数字和字母组成：
+
+  	function validate_password(password){
+
+  		//^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6-10}$
+
+		//测试密码：12345y
+
+  		var passwordReg=/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6}$/;
+
+  		if(password != "" && password.search(passwordReg) != -1)
+
+  		{
+
+  			document.getElementById("test_pw").innerHTML = "<font color='#CCFF99' size='3px'>√密码格式正确</font>";
+
+  		}else{
+
+  			document.getElementById("test_pw").innerHTML = "<font color='red' size='3px'>密码格式错误</font>";
+
+  			alert("密码有6位，由数字和字母组成!");
+
+  		}
+
+  	}
+
+  	
+
+	//函数3：验证两次输入的密码是否一样
+
+  	 function validate_password2(password2){
+
+  		var password = document.getElementById("password").value;
+
+  		//测试：console.log(password);
+
+  		//测试：console.log(password2);
+
+  		if (password == ""){
+
+			document.getElementById("is_test_pw").innerHTML = "<font color='red' size='3px'>密码不为空</font>";
+
+		}else if(password==password2){
+
+  			document.getElementById("is_test_pw").innerHTML = "<font color='#CCFF99' size='3px'>确认密码相同</font>";
+
+  		}else{
+
+  			document.getElementById("is_test_pw").innerHTML = "<font color='red' size='3px'>两次输入的密码不相同</font>";
+
+  			console.log("密码有6位，由数字和字母组成!");
+
+  		}
+
+  	} 
+
+  	
+
+	//函数4：验证表单是否已经填好
+
+  	function validate_form(){
+
+  		var username = document.getElementById("username").value;
+
+  		var password = document.getElementById("password").value;
+
+  		var password2 = document.getElementById("password2").value;
+
+  		//console.log("表单填写正确，可以正常提交！");
+
+  	
+
+  		//这三个，如果任何一个有问题，都返回false
+
+  		//18128@qq.com		12345y
+
+  		var emailReg=/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
+
+  		var passwordReg=/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6}$/;
+
+  		
+
+  		if(username != "" && emailReg.test(username)){
+
+  			if(password !="" && passwordReg.test(password)){
+
+  				if(password2==password){
+
+  					alert("信息填写正确，可以正常提交！");
+
+  					console.log("信息填写正确，可以正常提交！");
+					
+
+  					return true;
+
+  				}else{
+
+  					alert("密码不一致，提交失败，请重新填写！");
+
+  					console.log("密码不一致，提交失败，请重新填写！");
+
+  					return false;
+
+  				}
+
+  			}else{
+
+
+  				alert("密码格式错误，提交失败，请重新填写！");
+
+  				console.log("密码格式错误，提交失败，请重新填写！");
+
+  				return false;
+
+  			}
+
+  		}else{
+
+  			alert("注册的账号不符合要求，提交失败，请重新填写！");
+
+  			console.log("注册的账号不符合要求，提交失败，请重新填写！");
+
+  			return false;
+
+  		}
+
+  	}
+
 		addEventListener("load", function () {
 			setTimeout(hideURLbar, 0);
 		}, false);
@@ -117,11 +283,11 @@
 	<!--// Meta tag Keywords -->
 
 	<!-- Custom-Files -->
-	<link rel="stylesheet" href="moban3207/css/bootstrap.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
 	<!-- Bootstrap-Core-CSS -->
-	<link rel="stylesheet" href="moban3207/css/style.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
 	<!-- Style-CSS -->
-	<link rel="stylesheet" href="moban3207/css/fontawesome-all.css">
+	<link rel="stylesheet" href="css/fontawesome-all.css">
 	<!-- Font-Awesome-Icons-CSS -->
 	<!-- //Custom-Files -->
 
@@ -140,8 +306,8 @@
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 			<!-- logo -->
 			<h1>
-				<a class="navbar-brand" href="moban3207/index.html">Cappuccino
-					<span>Coffee</span>
+				<a class="navbar-brand" href="index.html">Coff-ood.
+					<span>Coffee And Food...</span>
 				</a>
 			</h1>
 			<!-- //logo -->
@@ -149,40 +315,47 @@
 			    aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item">
-						<a class="nav-link" href="moban3207/index.html">Home
+						<a class="nav-link" href="index.html">主页
 							<span class="sr-only">(current)</span>
 						</a>
 					</li>
 					<li class="nav-item mx-lg-4">
-						<a class="nav-link" href="moban3207/about.html">About Us</a>
+						<a class="nav-link" href="about.html">关于我们</a>
 					</li>
 					<li class="nav-item dropdown mr-lg-4">
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
 						    aria-expanded="false">
-							Pages
+							页面
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="moban3207/menu.html">Menu</a>
-							<a class="dropdown-item" href="moban3207/index.html">Services</a>
+							<a class="dropdown-item" href="menu.html">菜单</a>
+							<a class="dropdown-item" href="index.html">服务</a>
 							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="moban3207/about.html">Team</a>
+							<a class="dropdown-item" href="about.html">团队</a>
 						</div>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="moban3207/gallery.html">Gallery</a>
+						<a class="nav-link" href="gallery.html">展廊</a>
 					</li>
 					<li class="nav-item mx-lg-4">
-						<a class="nav-link" href="moban3207/menu.html">Menu</a>
+						<a class="nav-link" href="menu.html">菜单</a>
 					</li>
-					<li class="nav-item active">
-						<a class="nav-link" href="contact.html">Sign up&nbsp;</a>
+					<li class="nav-item">
+						<a class="nav-link" href="order.html">订单 </a>
 					</li>
-					<li class="nav-item active">
-						<a class="nav-link" href="contact.html">Sign in</a>
+					<li class="nav-item mx-lg-4">
+						<a class="nav-link" href="contact.html">个人信息</a>
 					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="sign in.html">登录</a>
+					</li>
+					<li class="nav-item mx-lg-4 active">
+						<a class="nav-link" href="Sign up.html">注册</a>
+					</li>
+					
 				</ul>
 			</div>
 		</nav>
@@ -197,9 +370,9 @@
 	<nav aria-label="breadcrumb">
 		<ol class="breadcrumb">
 			<li class="breadcrumb-item">
-				<a href="moban3207/index.html">Home</a>
+				<a href="index.html">主页</a>
 			</li>
-			<li class="breadcrumb-item active" aria-current="page">Sign Up</li>
+			<li class="breadcrumb-item active" aria-current="page">注册</li>
 		</ol>
 	</nav>
 	<!-- breadcrumb -->
@@ -208,7 +381,9 @@
 	<!-- contact -->
 	<div class="contact py-5" id="bc1">
 		<div class="container py-xl-5 py-lg-3">
-			<h5 class="tittle-w3 text-dark text-center mb-5">Sign Up</h5>
+			
+			<h5 class="tittle-w3 text-white text-center mb-5" >欢迎注册</h5>
+				
 			 <div  class="rg_layout" id="bc" >
 		
         <div class = "rg_left">
@@ -222,15 +397,18 @@
                     <table >
                         <tr>
                             <td class="td_left"><label for="usename"></label> 用户名</td>
-                            <td class="td_right"><input type="text" name="username" id="username" placeholder="请输入用户名"></td>
+                            <td class="td_right"><input type="text" id="username" name="username" placeholder="只能用邮箱注册" onblur="validate_username(this.value)"/></td>
+							<td id="test_user"></td>
                         </tr>
                         <tr>
                             <td class="td_left"><label for="password"></label> 密码</td>
-                            <td class="td_right"><input type="password" name="password" id="password" placeholder="请输入密码"></td>
+                            <td class="td_right"><input type="password" id="password" name="password" placeholder="6位密码由数字和字母组成" onblur="validate_password(this.value)"/></td>
+							<td id="test_pw"></td>
                         </tr>
                         <tr>
-                            <td class="td_left"><label for="email"></label> email</td>
-                            <td class="td_right"><input type="email" name="email" id="email" placeholder="请输入email"></td>
+                            <td class="td_left"><label for="verify"></label> 确认密码：</td>
+                            <td class="td_right"><input type="password" id="password2" name="verify" onblur="validate_password2(this.value)" /></td>
+							<td id="is_test_pw"></td>
                         </tr>
                         <tr>
                             <td class="td_left"><label for="name"></label> 姓名</td>
@@ -248,16 +426,13 @@
                         </tr>
                         <tr>
                             <td class="td_left"><label for="birthday">出生日期</label></td>
-                            <td class="td_right"><input type="data" name="birthday" id="birthday" placeholder="年/月/日"></td>
+                            <td class="td_right"><div class="form-group"><input type="data" name="birthday" id="birthday" placeholder="出生年月"class="form-control" data-language="en" required="" class="datepicker-here"></div></td>
+							
                         </tr>
+                       
+						<hr>
                         <tr>
-                            <td class="td_left"><label for="checkcode">验证码</label></td>
-                            <td class="td_right"><input type="text" name="checkcode" id="checkcode" placeholder="请输入验证码">
-                                <img id ="img_check" src="moban3207/img/2.png" >
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" align="center"><input type="submit" id = "btn_sub" value="注册"></td>
+                            <td colspan="2" align="center"><input type="submit" id = "btn_sub" value="注册" onclick="validate_form();a();" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" id="btn_res" value="重置"/></td>
                         </tr>
                     </table>
                 </form>
@@ -269,10 +444,7 @@
     </div>
 		</div>
 	</div>
-	<div class="map">
-		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26359195.17562375!2d-113.7156245614499!3d36.2473834534249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited+States!5e0!3m2!1sen!2sin!4v1471497559566"
-		    style="border:0" allowfullscreen=""></iframe>
-	</div>
+	
 	<!-- //contact -->
 
 	<!-- footer -->
@@ -281,8 +453,8 @@
 			<div class="container py-lg-2">
 				<div class="row">
 					<div class="col-lg-3 col-sm-6 w3l-footer one">
-						<h2 class="index.html mb-3">Cappuccino Coffee</h2>
-						<p>Totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+						<h2 class="index.html mb-3">Coff-ood</h2>
+						<p>生活应该如此，像咖啡一样，累积沉淀，快速反应，延续热情...</p>
 						<div class="clearfix"></div>
 					</div>
 					<div class="col-lg-2 col-sm-6 w3l-footer agileinfo_footer_grid my-sm-0 my-4">
@@ -290,19 +462,28 @@
 						<div class="nav-w3-l">
 							<ul class="list-unstyled">
 								<li class="mb-2">
-									<a href="moban3207/index.html">Home</a>
+									<a href="index.html">主页</a>
 								</li>
 								<li class="mb-2">
-									<a href="moban3207/about.html" class="">About Us</a>
+									<a href="about.html" class="">关于我们</a>
 								</li>
 								<li class="mb-2">
-									<a href="moban3207/menu.html" class="">Menu</a>
+									<a href="menu.html" class="">菜单</a>
 								</li>
 								<li class="mb-2">
-									<a href="moban3207/gallery.html" class="">Gallery</a>
+									<a href="gallery.html" class="">展廊</a>
+								</li>
+								<li class="mb-2">
+									<a href="contact.html" class="">个人信息</a>
+								</li>
+								<li class="mb-2">
+									<a href="order.html" class="">订单</a>
+								</li>
+								<li class="mb-2">
+									<a href="Sign up.html" class="">注册</a>
 								</li>
 								<li>
-									<a href="moban3207/contact.html" class="">Contact Us</a>
+									<a href="Sign in.html" class="">登陆</a>
 								</li>
 							</ul>
 						</div>
@@ -333,8 +514,8 @@
 						<ul class="list-unstyled">
 							<li>
 								<i class="fas fa-map-marker"></i>
-								<p>The company name
-									<span>Lorem ipsum dolor,</span>New York,Morris Park. </p>
+								<p>福建省厦门市思明区
+									厦大学生公寓</p>
 								<div class="clearfix"></div>
 							</li>
 							<li class="my-2">
@@ -344,7 +525,7 @@
 							</li>
 							<li>
 								<i class="fas fa-envelope"></i>
-								<a href="mailto:info@example.com">mail@example.com</a>
+								<a href="mailto:info@example.com">mail@stu.xmu.edu.cn</a>
 								<div class="clearfix"></div>
 							</li>
 						</ul>
@@ -352,30 +533,27 @@
 				</div>
 			</div>
 		</div>
-		<div class="copy-right-grids py-3">
-			<p class="footer-gd text-center text-white">Copyright &copy; 2018.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
-		</div>
 	</footer>
 	<!-- //footer -->
 
 
 	<!-- Js files -->
 	<!-- JavaScript -->
-	<script src="moban3207/js/jquery-2.2.3.min.js"></script>
+	<script src="js/jquery-2.2.3.min.js"></script>
 	<!-- Default-JavaScript-File -->
-	<script src="moban3207/js/bootstrap.js"></script>
+	<script src="js/bootstrap.js"></script>
 	<!-- Necessary-JavaScript-File-For-Bootstrap -->
 
 	<!-- smooth scrolling -->
-	<script src="moban3207/js/SmoothScroll.min.js"></script>
+	<script src="js/SmoothScroll.min.js"></script>
 	<!-- //smooth scrolling -->
 
 	<!-- move-top -->
-	<script src="moban3207/js/move-top.js"></script>
+	<script src="js/move-top.js"></script>
 	<!-- easing -->
-	<script src="moban3207/js/easing.js"></script>
+	<script src="js/easing.js"></script>
 	<!--  necessary snippets for few javascript files -->
-	<script src="moban3207/js/coffee.js"></script>
+	<script src="js/coffee.js"></script>
 
 	<!-- //Js files -->
 
