@@ -1,70 +1,70 @@
 咖啡类
-意式浓缩咖啡	12元
-冰美式咖啡	14元
-美式咖啡		15元
-水事恢咖啡	20元
-挛犊咖啡		19元
-水卡布奇诺咖啡	20元
-卡布奇诺咖嗶	19元
-冰榛果拿映咖啡	25元
-棒果阜铁咖啡	22元
-冰香草拿铁咖啡	25元
-香草拿铁咖啡	22元
-冰焦糖玛奇朵咖啡	25元
-焦糖玛奇朵咖啡	22元
-冰摩卡咖啡	28元
-摩卡咖啡		26元
-红茶拿铁		16元
-冰红茶拿铁	10元
-冰玫瑰拿铁	16元
-玫瑰拿铁		16元
-抹茶拿铁		16元
-冰抹茶拿铁	16元
-
+意式浓缩咖啡	12元	caffe-americano
+冰美式咖啡	14元	caffe-latte
+美式咖啡		15元	cappuccino
+水事恢咖啡	20元	caramel-espresso-frappuccino
+挛犊咖啡		19元	caramel-macchiato
+水卡布奇诺咖啡	20元	hazelnut-flavored-latte
+卡布奇诺咖嗶	19元	cold-brew
+冰榛果拿映咖啡	25元	cold-brew-float
+棒果阜铁咖啡	22元	cold-brew-lemon-sour
+冰香草拿铁咖啡	25元	cold-brew-malt	
+香草拿铁咖啡	22元	cold-foam-cold-brew
+冰焦糖玛奇朵咖啡	25元	espresso
+焦糖玛奇朵咖啡	22元	mocha-java-chip-frappuccino
+冰摩卡咖啡	28元	flat-white
+摩卡咖啡		26元	caffe-mocha
+红茶拿铁		16元	nitro-cold-brew
+冰红茶拿铁	10元	signature-chocolate-beverage
+冰玫瑰拿铁	16元	mocha-frappuccino
+玫瑰拿铁		16元	vanilla-flavor-sweet-cream-cold-brew
+抹茶拿铁		16元	sparkling-espresso-tonic
+冰抹茶拿铁	16元	vanilla-flavored-cream-frappuccino-blended-beverage
+	
 冰乐
-草莓冰乐		16元
-蓝霉冰乐		10元
-芒果冰乐		16元
-抹茶冰乐		16元
-卡布奇诺冰乐	18元
-巧克力冰乐	18元
-摩卡冰乐		18元
+草莓冰乐		16元	green-tea-frappuccino
+蓝霉冰乐		10元	iced-shaken-honey-ruby-grapefruit-black-tea
+芒果冰乐		16元	green-tea-latte
+抹茶冰乐		16元	peach-shrub-fizz
+卡布奇诺冰乐	18元	iced-shaken-mango-herbal-juiced-tea
+巧克力冰乐	18元	instore-nitro-cold-brew-float
+摩卡冰乐		18元	iced-shaken-peach-green-tea
 
 松饼/果盘
-水果松饼		18元
-大果盘		45元
-蓝莓松		18元
-小果盘		35元
-肉松松饼		18元
-水果沙拉		15元
-蜂蜜松饼		15元
-草莓松饼		15元
-花生松饼		15元
-原味松饼		15元
-焦糖松饼		15元
-巧克力松饼	15元
+水果松饼		18元	eggs-mushroom-shrimp-wrap
+大果盘		45元	french-butter-croissant
+蓝莓松		18元	fruitnnuts
+小果盘		35元	french-caramel-bread
+肉松松饼		18元	fruit-salad
+水果沙拉		15元	greek-flavored-yoghurt-mixed-berry
+蜂蜜松饼		15元	greek-flavored-yoghurt-yellow-peach
+草莓松饼		15元	ham-and-cheese-croissant
+花生松饼		15元	ham-and-double-cheese-croque-monsieur
+原味松饼		15元	ham-and-gouda-sandwich
+焦糖松饼		15元	hazelnut-croissant
+巧克力松饼	15元	honey-raisin-scone
 
 精美小吃
-炸薯条		18元
-手撕牛肉		30元
-炸牛奶		18元
-椒盐掌中宝	30元
-南瓜饼		18元
-水煮鱿鱼		28元
-冰镇青瓜		18元
-炸鱿鱼丝		28元
-手拍青瓜		18元
-手撕鱿鱼		28元
-盐水芥菜		18元
-骨肉相连		25元
-西兰花		18元
-椒盐鸭下巴	25元
-南瓜子		15元
-卤水鸭下巴	25元
-绿茶瓜子		15元
-盐煽鸡翅		25元
-水晶凤爪		25元
-榴莲酥		25元
+炸薯条		18元	lollipops
+手撕牛肉		30元	macaron
+炸牛奶		18元	new-york-style-creamy-cheesecake
+椒盐掌中宝	30元	pastrami-sandwich
+南瓜饼		18元	oat-caramel-pudding-bread
+水煮鱿鱼		28元	premium-chocolate-croissant
+冰镇青瓜		18元	raisin-scone
+炸鱿鱼丝		28元	red-bean-oats-scone
+手拍青瓜		18元	raisins-walnut-bread
+手撕鱿鱼		28元	roasted-french-ham-egg-sandwich
+盐水芥菜		18元	slow-roasted-ham-cheese-ciabatta
+骨肉相连		25元	shortbread
+西兰花		18元	starbucks-chewing-gum
+椒盐鸭下巴	25元	starbucks-coffee-tiramisu
+南瓜子		15元	Starbucks-mints
+卤水鸭下巴	25元	triple-dark-chocolate-cake
+绿茶瓜子		15元	tuna-panini
+盐煽鸡翅		25元	turkey-bacon-english-muffin
+水晶凤爪		25元	waferrolls
+榴莲酥		25元	whole-wheat-walnut-muffin
 卤水鸭脚		25元
 绿茶饼		25元
 山药卷		25元
@@ -78,21 +78,21 @@
 香炸玉米棒	20元
 
 主食
-意式黑椒牛排	58元
-法式蘑菇s级牛排	58元
-法式黑胡椒西冷牛排	58元
-牛肉蛋炒饭	18元
-青菜威肉炒饭	16元
-扬州炒饭		12元
-鸡肉披萨		38元 
-牛肉披萨		38元
-培根披萨		38元
-海鲜技萨		48元 
-水果披萨		38元
-意大利肉酱面	32元
-黑椒牛柳意面	32元
-番茄蘑菇意面	26元
-传统章大利面	26元
+意式黑椒牛排	58元	american-style-pancakes
+法式蘑菇s级牛排	58元	avocado-and-chicken-bagel
+法式黑胡椒西冷牛排	58元	bacon-and-egg-croissant-bun
+牛肉蛋炒饭	18元	bacon-and-egg-wrap
+青菜威肉炒饭	16元	beef-baguette
+扬州炒饭		12元	beef-cheese-croissant
+鸡肉披萨		38元 	blueberry-and-cookie-style-cheesecake
+牛肉披萨		38元	blueberry-muffin
+培根披萨		38元	caesar-chicken-wrap
+海鲜技萨		48元 	cashews
+水果披萨		38元	chicken-panini
+意大利肉酱面	32元	chocolate-muffin
+黑椒牛柳意面	32元	cinnamon-swirl
+番茄蘑菇意面	26元	classic-swiss-roll-cake
+传统章大利面	26元	eclair
 
 
 
