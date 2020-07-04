@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="top.xeonwang.tmxk.dao.AdminMapper">
+	<!-- 根据姓名查询对象 -->
+	<select id="FindByName" resultType="String">
+		SELECT adminid	
+		FROM
+		tmxk.ADMIN
+		where
+		adminname = #{AdminName}
+	</select>
+
+	<insert id = "AddAdmin">
+		INSERET INTO ADMIN(adminid,adminname,adminpos)
+		Values(#{AdminId},#{AdminName},#{AdminPos})	
+	</insert>
+	
+	<update id="UpdateName">
+		update ADMIN
+		SET adminname = #{AdminName} 
+		WHERE adminid = #{AdminId}
+	</update>
+	
+	<update id="UpdatePos">
+		update ADMIN
+		SET adminpos = #{AdminPos} 
+		WHERE adminid = #{AdminId}
+	</update>
+	
+	
+	<delete id="DropAdmin">
+		DELETE FROM ADMIN	
+		WHERE adminid = #{AdminId}
+	</delete>
+
+</mapper>

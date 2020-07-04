@@ -16,7 +16,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 	<insert id = "AddUser">
 		INSERET INTO User(userid,username,userpwd,userphone,usersex,useremail)
-		Values(UserId,UserName,UserPwd,UserPhone,UserSex,UserEmail)	
+		Values(#{UserId},#{UserName},#{UserPwd},#{UserPhone},#{UserSex},#{UserEmail})	
 	</insert>
 	
 	<update id="UpdateName">
