@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="top.xeonwang.tmxk.dao.UserMapper">
+
+	<!-- 根据姓名,电话查询对象 -->
+	<select id="FindByName_Phone" resultType="String">
+		SELECT userid	
+		FROM
+		tmxk.USER
+		where
+		username = #{UserName} and UserPhone = #{UserPhone}
+	</select>
+
+	<insert id = "AddUser">
+		INSERET INTO User(userid,username,userpwd,userphone,usersex,useremail)
+		Values(UserId,UserName,UserPwd,UserPhone,UserSex,UserEmail)	
+	</insert>
+	
+	<update id="UpdateName">
+	update USER
+	SET username = #{UserName} 
+	WHERE userid = #{UserId}
+	</update>
+	
+	<update id="UpdatePwd">
+	update USER
+	SET userpwd = #{UserPwd} 
+	WHERE userid = #{UserId}
+	</update>
+	
+	<update id="UpdatePhone">
+	update USER
+	SET userphone = #{UserPhone} 
+	WHERE userid = #{UserId}
+	</update>
+	
+	<update id="UpdateSex">
+	update USER
+	SET usersex = #{UserSex} 
+	WHERE userid = #{UserId}
+	</update>
+	
+	<update id="UpdateEmail">
+	update USER
+	SET useremail = #{UserEmail} 
+	WHERE userid = #{UserId}
+	</update>
+	
+	<delete id="DropUser">
+	DELETE FROM USER	
+	WHERE userid = #{UserId}
+	</delete>
+
+</mapper>
