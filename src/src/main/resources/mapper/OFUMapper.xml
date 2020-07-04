@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="top.xeonwang.tmxk.dao.OFUMapper">
+	<insert id = "AddOFU">
+		INSERET INTO OFU(orderid,foodid,foodnumber)
+		Values(#{OrderId},#{FoodId},#{FoodNumber})	
+	</insert>
+	
+	<delete id="DropOA">
+	DELETE FROM OFU	
+	WHERE orderid = #{OrderId} and foodid = #{FoodId} and foodnumber = #{FoodNumber}
+	</delete>
+
+</mapper>

@@ -16,7 +16,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 	<insert id = "AddFood">
 		INSERET INTO Food(foodname,foodtype,foodstore,foodimg)
-		Values(FoodName,FoodType,FoodStore,FoodImg)	
+		Values(#{FoodName},#{FoodType},#{FoodStore},#{FoodImg})	
 	</insert>
 	
 	<update id="UpdateName">
