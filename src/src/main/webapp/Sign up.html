@@ -115,7 +115,7 @@
 	<div class="contact py-5" id="bc1">
 		<div class="container py-xl-5 py-lg-3">
 			
-			<h5 class="tittle-w3 text-white text-center mb-5" >欢迎注册</h5>
+			<h5 class="tittle-w3 text-white text-center mb-5" id="head">欢迎注册</h5>
 				
 			 <div  class="rg_layout" id="bc" >
 		
@@ -124,23 +124,23 @@
             <p>USER REGISTER</p>
         </div>
         <div class = "rg_center">
-            <div class="rg_form">
+            <div class="rg_form" id="table">
                 <!-- 定义表单 form-->
-                <form action="#" method="post">
+                <form action="Sign in.html" method="post">
                     <table >
                         <tr>
                             <td class="td_left"><label for="usename"></label> 用户名</td>
-                            <td class="td_right"><input type="text" id="username" name="username" placeholder="只能用邮箱注册" onblur="validate_username(this.value)"/></td>
+                            <td class="td_right"><input  type="text" id="username" name="username" placeholder="只能用邮箱注册" onblur="validate_username(this.value)" required=""/></td>
 							<td id="test_user"></td>
                         </tr>
                         <tr>
                             <td class="td_left"><label for="password"></label> 密码</td>
-                            <td class="td_right"><input type="password" id="password" name="password" placeholder="6位密码由数字和字母组成" onblur="validate_password(this.value)"/></td>
+                            <td class="td_right"><input type="password" id="password" name="password" placeholder="6位密码由数字和字母组成" onblur="validate_password(this.value)" required=""/></td>
 							<td id="test_pw"></td>
                         </tr>
                         <tr>
                             <td class="td_left"><label for="verify"></label> 确认密码：</td>
-                            <td class="td_right"><input type="password" id="password2" name="verify" onblur="validate_password2(this.value)" /></td>
+                            <td class="td_right"><input type="password" id="password2" name="verify" onblur="validate_password2(this.value)" required=""/></td>
 							<td id="is_test_pw"></td>
                         </tr>
                         <tr>
@@ -159,13 +159,13 @@
                         </tr>
                         <tr>
                             <td class="td_left"><label for="birthday">出生日期</label></td>
-                            <td class="td_right"><div class="form-group"><input type="data" name="birthday" id="birthday" placeholder="出生年月"class="form-control" data-language="en" required="" class="datepicker-here"></div></td>
+                            <td class="td_right"><input type="date" name="birthday" id="birthday" ></td>
 							
                         </tr>
                        
 						<hr>
                         <tr>
-                            <td colspan="2" align="center"><input type="submit" id = "btn_sub" value="注册" onclick="a();validate_form();" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" id="btn_res" value="重置"/></td>
+                            <td colspan="2" align="center"><input type="submit" id = "btn_sub" value="注册" onclick="validate_form();" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" id="btn_res" value="重置"/></td>
                         </tr>
                     </table>
                 </form>
