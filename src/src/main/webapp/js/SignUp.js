@@ -13,7 +13,7 @@ function a()
 
   		{
 
-  			document.getElementById("test_user").innerHTML = "<font color='#CCFF99' size='3px'>√邮箱格式正确</font>";
+  			document.getElementById("test_user").innerHTML = "<font color='green' size='3px'>√邮箱格式正确</font>";
 
   		}else{
 
@@ -39,7 +39,7 @@ function a()
 
   		{
 
-  			document.getElementById("test_pw").innerHTML = "<font color='#CCFF99' size='3px'>√密码格式正确</font>";
+  			document.getElementById("test_pw").innerHTML = "<font color='green' size='3px'>√密码格式正确</font>";
 
   		}else{
 
@@ -69,7 +69,7 @@ function a()
 
 		}else if(password==password2){
 
-  			document.getElementById("is_test_pw").innerHTML = "<font color='#CCFF99' size='3px'>√确认密码相同</font>";
+  			document.getElementById("is_test_pw").innerHTML = "<font color='green' size='3px'>√确认密码相同</font>";
 
   		}else{
 
@@ -112,14 +112,14 @@ function a()
   			if(password !="" && passwordReg.test(password)){
 
   				if(password2==password){
-					location.href='Sign in.html';
-
-  					//alert("信息填写正确，可以正常提交！");
-
-  					//console.log("信息填写正确，可以正常提交！");
 					
 
-  					return true;
+  					alert("信息填写正确，可以正常提交！");
+
+  					console.log("信息填写正确，可以正常提交！");
+					
+
+  					return false;
 
   				}else{
 
