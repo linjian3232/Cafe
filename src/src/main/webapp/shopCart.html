@@ -128,7 +128,7 @@
 				<th class="head-title">数量</th>
 				<th class="head-title">小计</th></tr>
 			</thead>
-			<tbody>
+			<tbody id="tbodyNode">
 			  	<tr id="1">
 					<td class="row" id="2">
 							<div class="col-6 col-md-6 themed-grid-col">
@@ -143,7 +143,7 @@
 					</td>
 					<td id="4">
 						<div id="5" class="table-content">
-							<input  onChange="onNumberChange(parentNode.parentNode.previousSibling,parentNode.parentNode.nextSibling)" min="1" type="number" class="input-number" placeholder="1" />
+							<input  onChange="addRow()" min="1" type="number" class="input-number" />
 						</div>
 					</td>
 						<td><div class="table-content">100</div>
