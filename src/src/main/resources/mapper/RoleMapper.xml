@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="top.xeonwang.tmxk.dao.RoleMapper">
+	<insert id = "AddRole">
+		INSERET INTO ROLETABLE(roleid,rolename)
+		Values(#{RoleId},#{RoleName})	
+	</insert>
+	
+	<update id="UpdateName">
+	update ROLETABLE
+	SET rolename = #{RoleName} 
+	WHERE roleid = #{RoleId}
+	</update>
+	
+	<delete id="DropRole">
+	DELETE FROM ROLETABLE
+	WHERE roleid = #{RoleId}
+	</delete>
+
+</mapper>
