@@ -15,7 +15,7 @@
 	width: 100;
 
 
-	background-image: url("../images/7.jpg");
+	
 
 	background-repeat: no-repeat;
 
@@ -30,8 +30,7 @@
 	height: 120px;
 
 	width: 100;
-
-	background-image: linear-gradient(to top,#fbb8ac,#e6e2c3);
+	color:black;
 
 	text-align: center;
 
@@ -53,17 +52,17 @@
 
 #wrap .logGet {
 
-	height: 408px;
+	height: 700px;
 
-	width: 368px;  
+	width: 600px;  
 
 	position: absolute;
 
 	background-color: #FFFFFF;
 
-	top: 20%;
+	top: 10%;
 
-	right: 15%;
+	right: 23%;
 
 }
 
