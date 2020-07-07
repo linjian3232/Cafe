@@ -123,47 +123,26 @@
 			<caption>响应式表格布局</caption>
 			<thead>
 			  <tr>
-				<th class="head-title">产品</th>
-				<th class="head-title">价格(CNY)</th>
-				<th class="head-title">数量</th>
-				<th class="head-title">小计</th></tr>
+				<th colspan="2">产品</th>
+				<th>数量</th>
+				<th>价格(CNY)</th>
+				<th>小计</th>
+			  	<th></th>
+			  </tr>
 			</thead>
 			<tbody id="tbodyNode">
-			  	<tr id="1">
-					<td class="row" id="2">
-							<div class="col-6 col-md-6 themed-grid-col">
-								<img src="images/3.jpg" class="img-cart" alt="实物图" />
-							</div>
-							<div class="col-6 col-md-6 themed-grid-col descripe">
-								超级无敌大咖啡
-							</div>
-					  </td>
-					<td id="3">
-						<div id="0" class="table-content">1</div>
-					</td>
-					<td id="4">
-						<div id="5" class="table-content">
-							<input  onChange="addRow()" min="1" type="number" class="input-number" />
-						</div>
-					</td>
-						<td><div class="table-content">100</div>
-					</td>
+			  	<tr id="wudidakafei">
+					<td id="1"><img src="images/3.jpg" alt="实物图" /></td>
+					<td id="2">超级无敌大咖啡</td>
+					<td id="3"><input onChange="onNumberChange(parentNode,this.value);addRow()" min="1" type="number" class="input-number" value="1"/></td>
+					<td id="4">1</td>
+					<td id="5">100</td>
+					<td id="6"><div onclick="del(parentNode.parentNode)" class="del">删除</div></td>
 				</tr>
-			  <tr>
-				<td>产品2</td>
-				<td>10/11/2013</td>
-				<td>发货中</td></tr>
-			  <tr>
-				<td>产品3</td>
-				<td>20/10/2013</td>
-				<td>待确认</td></tr>
-			  <tr>
-				<td>产品4</td>
-				<td>20/10/2013</td>
-				<td>已退货</td></tr>
 			</tbody>
 		  </table>
 		</div>
+
 	</div>
 	<!-- footer -->
 	<footer>

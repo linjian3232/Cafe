@@ -2,57 +2,25 @@
 .product{
 	height: 250px;
 	min-width: 1200px;
-	padding-left: 0px;
-	border:0
 }
-.themed-grid-col{
-	padding-top: 20px;
-	padding-left: 0px;
-	padding-right: 0px;
-	max-width: 400px;
-}
-.head-title{
-	padding-left: 0px;
-	padding-right: 0px;
-	text-align: center;
-}
-.head-title-name{
-	padding-left: 0px;
-	padding-right: 0px;
-	min-width: 600px;
-}
-.table-head{
+.table th{
 	text-align: center;
 	font-size: 20px;
-	font-style: oblique;
-	padding-top: 20px;
-	border: thick;
-	padding-right: 0px;
 }
-.price{
-	text-align: center;
-	font-size: 20px;
-	margin-top: 75px;
-	padding-top:25px;
-}
-.img-cart{
+.table td img{
 	height: 200px;
 	width: 200px;
-	align-content: space-around;
-	padding:25px
 }
-.descripe{
-	font-family: SimHei;
-	margin-top: 75px;
-	padding: 25px;
-	font-size: 20px;
-	align-content: center;
-}
-.table-content{
+.table td{
 	text-align: center;
-	margin-top:75px;
-	padding-top: 25px;
+	vertical-align:middle;
+	font-size:14pt;
+	font-family:Times New Roman,Microsoft YaHei;
 }
-.input-number{
-	text-align: center;
+.del:hover{
+	color:red;
+	cursor:pointer;
+}
+.table input{
+    text-align:center;
 }
