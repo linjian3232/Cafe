@@ -29,7 +29,11 @@ function createMenu(data){
         var src=data[i].src;
         var name=data[i].name;
         var price=data[i].price;
-        var type=data[i].type;
+        var type;
+		switch(data[i].type){
+			case '1':type="coffee";break;
+			case '2':type="snack";break;
+		}
         addOne(src,name,price,type);
     }
 }
