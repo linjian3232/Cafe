@@ -25,7 +25,8 @@
 	<!-- Flexslider-CSS -->
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
 	<!-- Style-CSS -->
-	<link rel="stylesheet" href="css/fontawesome-all.css">
+	<link rel="stylesheet" href="css/fontawesome-all.css"/>
+	<link rel="stylesheet" href="css/menu.css"/>
 	<!-- Font-Awesome-Icons-CSS -->
 	<!-- //Custom-Files -->
 	<link rel="shortcut icon" href="images/favicon.ico">
@@ -172,14 +173,35 @@
 		</div>
 	</div>
 	<!-- //menu-section -->
-	
-	<section>
-		<div class="container">
-			<hr>
-			<div class="order-steps text-center">
-				<h2 class="order-steps-heading btm-15">咖啡类</h2>
+	<div class="container" id="selector">
+		<div class="row">
+			<div class="col-6 col-md-2 typeStyle">
+				品类
 			</div>
-			<div>
+			<div class="col-6 col-md-2 fontStyle">
+				<input type="checkbox" checked="true" onclick="changeSelect(checked)" class="checkboxStyle"/>咖啡
+			</div>
+			<div class="col-6 col-md-2 fontStyle">
+				<input type="checkbox" checked="true" onclick="changeSelect(checked)" class="checkboxStyle"/>拼盘
+			</div>
+			<div class="col-6 col-md-2 fontStyle">
+				<input type="checkbox" checked="true" onclick="changeSelect(checked)" class="checkboxStyle"/>主食
+			</div>
+			<div class="col-6 col-md-2 fontStyle">
+				<input type="checkbox" checked="true" onclick="changeSelect(checked)" class="checkboxStyle"/>精品小吃
+			</div>
+			<div class="col-6 col-md-2 fontStyle">
+				<input type="checkbox" checked="true" onclick="changeSelect(checked)" class="checkboxStyle"/>冰乐
+			</div>
+		</div>
+	</div>
+	<section>
+		<div class="container" id="menu">
+			<hr>
+			<div id="coffee">
+				<div class="order-steps text-center">
+					<h2 class="order-steps-heading btm-15">咖啡类</h2>
+				</div>
 	       		<div class="row">
 					<div>
 						<div>
@@ -270,7 +292,7 @@
 							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
 						</div>
 						<hr>
-						<div class="row no-gutters">
+						<div class="row no-gutters" >
 							<h6>香草拿铁 ￥22</h6>
 							<div class="col-lg-6 col-6">
 								<div class="choose-food-btn text-right">
@@ -352,10 +374,10 @@
 				</div>
 			</div>	
 			<hr>
-			<div class="order-steps text-center">
-				<h2 class="order-steps-heading btm-15">拼盘/松饼</h2>
-			</div>
-			<div>
+			<div id="dish">
+				<div class="order-steps text-center">
+					<h2 class="order-steps-heading btm-15">拼盘/松饼</h2>
+				</div>
 	       		<div class="row">
 					<div>
 						<div>
@@ -514,10 +536,10 @@
 				</div>
 			</div>
 			<hr>
-			<div class="order-steps text-center">
-				<h2 class="order-steps-heading btm-15">主食类</h2>
-			</div>
-			<div>
+			<div id="main">
+				<div class="order-steps text-center">
+					<h2 class="order-steps-heading btm-15">主食类</h2>
+				</div>
 	       		<div class="row">
 					<div>
 						<div>
@@ -732,10 +754,10 @@
 				</div>
 			</div>
 			<hr>
-			<div class="order-steps text-center">
-				<h2 class="order-steps-heading btm-15">精品小吃</h2>
-			</div>
-			<div>
+			<div id="snack">
+				<div class="order-steps text-center">
+					<h2 class="order-steps-heading btm-15">精品小吃</h2>
+				</div>
 	       		<div class="row">
 					<div>
 						<div>
@@ -1160,10 +1182,10 @@
 				</div>
 			</div>	
 			<hr>
-			<div class="order-steps text-center">
-				<h2 class="order-steps-heading btm-15">冰乐类</h2>
-			</div>
-			<div>
+			<div id="ice">
+				<div class="order-steps text-center">
+					<h2 class="order-steps-heading btm-15">冰乐类</h2>
+				</div>
 	       		<div class="row">
 					<div>
 						<div>
