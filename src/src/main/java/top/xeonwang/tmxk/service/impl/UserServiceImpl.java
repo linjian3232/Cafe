@@ -15,10 +15,10 @@ public class UserServiceImpl implements UserService
 		usermapper.AddUser(UserId, UserName, UserPwd, UserPhone, UserSex, UserEmail);
 	}
 
-	public String FindByName_Phone(String UserName, String UserPhone)
+	public String FindByName(String UserName)
 	{
 		// TODO Auto-generated method stub
-		return usermapper.FindByName_Phone(UserName, UserPhone);		
+		return usermapper.FindByName(UserName);		
 	}
 
 	public void DropUser(String UserId)
@@ -55,6 +55,13 @@ public class UserServiceImpl implements UserService
 	{
 		// TODO Auto-generated method stub
 		usermapper.UpdateEmail(UserId, UserEmail);
+	}
+
+	@Override
+	public String GetPwd(String UserName)
+	{
+		// TODO Auto-generated method stub
+		return usermapper.GetPwd(UserName);
 	}
 
 

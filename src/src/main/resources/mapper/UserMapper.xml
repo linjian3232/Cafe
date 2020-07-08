@@ -6,12 +6,20 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="top.xeonwang.tmxk.dao.UserMapper">
 
 	<!-- 根据姓名,电话查询对象 -->
-	<select id="FindByName_Phone" resultType="String">
+	<select id="FindByName" resultType="String">
 		SELECT userid	
 		FROM
 		tmxk.USER
 		where
-		username = #{UserName} and UserPhone = #{UserPhone}
+		username = #{UserName}
+	</select>
+	
+	<select id="FindByName_Phone" resultType="String">
+		SELECT userpwd	
+		FROM
+		tmxk.USER
+		where
+		username = #{UserName}
 	</select>
 
 	<insert id = "AddUser">

@@ -11,7 +11,9 @@ public interface UserService
 	public void UpdateSex(String UserId,String UserSex);
 	public void UpdateEmail(String UserId,String UserEmail);	
 //	根据姓名、电话查找用户id
-	public String FindByName_Phone(String UserName,String UserPhone);
+	public String FindByName(String UserName);
+	//获取用户密码
+	public String GetPwd(String UserName);
 //	删除用户
 	public void DropUser(String UserId);
 	

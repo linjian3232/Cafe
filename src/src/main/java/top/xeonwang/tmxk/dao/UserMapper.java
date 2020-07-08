@@ -16,7 +16,8 @@ public interface UserMapper
 	public void UpdateEmail(@Param("UserId") String UserId,@Param("UserEmail") String UserEmail);
 
 //	根据姓名、电话查找用户id
-	public String FindByName_Phone(@Param("UserName") String UserName,@Param("UserPhone") String UserPhone);
+	public String FindByName(@Param("UserName") String UserName);
+	public String GetPwd(@Param("UserName") String UserName);
 //	删除用户
 	public void DropUser(@Param("UserId") String UserId);
 	

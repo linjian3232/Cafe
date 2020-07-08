@@ -36,7 +36,7 @@ public class menuController {
 		String FoodUnit = request.getParameter("goods_unit");
 		String FoodImg = request.getParameter("goods_image");
 		double FoodPrice = Double.parseDouble(request.getParameter("goods_price"));
-		String FoodId = GetRandomId.GetRandomString(10);
+		String FoodId = GetRandomId.GetRandomString(4);
 		
 		foodservice.AddFood(FoodId,FoodName, FoodType, FoodStock, FoodUnit, FoodImg, FoodPrice);
 		
