@@ -1,6 +1,7 @@
 // JavaScript Document
 function a()
 {location.href='Sign in.html';}
+
 		function validate_username(username){
 
   		//定义正则表达式的变量:邮箱正则
@@ -92,10 +93,29 @@ function a()
   		var password = document.getElementById("password").value;
 
   		var password2 = document.getElementById("password2").value;
-
+        var birthday=document.getElementById("birthday").value;
+		var tel=document.getElementById("tel").value;
   		//console.log("表单填写正确，可以正常提交！");
+		
+/*
+var obj={
+        username:username,//这里面定义的变量名要跟数据库里面的字段相同
+        password:password,
+        birthday:birthday,
+        tel:tel
+    }
+    $.ajax({
+        url:"addInfoPerson.action",//这里是你接口的路径，记住http://不要忘记,localhost是你本地的地址，如果要请求别人的请将别人的ip地址替换，后面的addInfoPerson是接口名字。
+        type:"POST",//请求方式是get还是post,我这里用的是post
+        contentType:"application/json",
+        data:JSON.stringify(obj),//传递的参数
+        dataType:"json",
+        success:function(){ //成功返回的回调函数
+            alert("注册成功");
+        }
+     });
+}*/
 
-  	
 
   		//这三个，如果任何一个有问题，都返回false
 
