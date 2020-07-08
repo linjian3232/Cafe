@@ -39,6 +39,7 @@
 </head>
 
 <body>
+	<script src="js/menu.js"></script>
 	<!-- header -->
 	<div class="header">
 		<!-- navigation -->
@@ -126,7 +127,7 @@
 			<ul id="flexiselDemo1">
 				<li>
 					<div class="w3layouts_banner_bottom_left">
-						<img src="images/牛排1.jpg" heigth='600' width='300' alt=" " class="img-fluid" />
+						<img src="images/牛排1.jpg" heigth='600' width='300' alt=" " class="img-fluid img-style" />
 						<h4>主食类
 							<span>￥12-￥58</span>
 						</h4>
@@ -135,7 +136,7 @@
 				</li>
 				<li>
 					<div class="w3layouts_banner_bottom_left">
-						<img src="images/冰乐1.jpg" alt=" " class="img-fluid" />
+						<img src="images/冰乐1.jpg" alt=" " class="img-fluid img-style" />
 						<h4>冰乐类
 							<span>￥10-￥18</span>
 						</h4>
@@ -144,7 +145,7 @@
 				</li>
 				<li>
 					<div class="w3layouts_banner_bottom_left">
-						<img src="images/薯条1.jpg" alt=" " class="img-fluid" />
+						<img src="images/薯条1.jpg" alt=" " class="img-fluid img-style" />
 						<h4>精美小吃
 							<span>￥15-￥30</span>
 						</h4>
@@ -153,7 +154,7 @@
 				</li>
 				<li>
 					<div class="w3layouts_banner_bottom_left">
-						<img src="images/咖啡1.jpg" alt=" " class="img-fluid" />
+						<img src="images/咖啡1.jpg" alt=" " class="img-fluid img-style" />
 						<h4>咖啡类
 							<span>￥12-￥28</span>
 						</h4>
@@ -162,7 +163,7 @@
 				</li>
 				<li>
 					<div class="w3layouts_banner_bottom_left">
-						<img src="images/果盘1.jpg" alt=" " class="img-fluid" />
+						<img src="images/果盘1.jpg" alt=" " class="img-fluid img-style" />
 						<h4>拼盘/松饼
 							<span>￥15-￥45</span>
 						</h4>
@@ -178,27 +179,15 @@
 			<div class="col-6 col-md-2 typeStyle">
 				品类
 			</div>
-			<div class="col-6 col-md-2 fontStyle alignStyle">
-				<input type="checkbox" checked="true" onclick="changeSelect(checked,coffee)" class="checkboxStyle"/>咖啡
-			</div>
-			<div class="col-6 col-md-2 fontStyle alignStyle">
-				<input type="checkbox" checked="true" onclick="changeSelect(checked,dish)" class="checkboxStyle"/>拼盘
-			</div>
-			<div class="col-6 col-md-2 fontStyle alignStyle">
-				<input type="checkbox" checked="true" onclick="changeSelect(checked,main)" class="checkboxStyle"/>主食
-			</div>
-			<div class="col-6 col-md-2 fontStyle alignStyle">
-				<input type="checkbox" checked="true" onclick="changeSelect(checked,snack)" class="checkboxStyle"/>精品小吃
-			</div>
-			<div class="col-6 col-md-2 fontStyle alignStyle">
-				<input type="checkbox" checked="true" onclick="changeSelect(checked,ice)" class="checkboxStyle"/>冰乐
-			</div>
+			<div class="col-6 col-md-2 fontStyle alignStyle"><input type="checkbox" checked="true" onclick="changeSelect(checked,coffee);" class="checkboxStyle">咖啡</div>
+			<div class="col-6 col-md-2 fontStyle alignStyle"><input type="checkbox" checked="true" onclick="changeSelect(checked,dish);" class="checkboxStyle">拼盘</div>
+			<div class="col-6 col-md-2 fontStyle alignStyle"><input type="checkbox" checked="true" onclick="changeSelect(checked,main);" class="checkboxStyle">主食</div>
+			<div class="col-6 col-md-2 fontStyle alignStyle"><input type="checkbox" checked="true" onclick="changeSelect(checked,snack);" class="checkboxStyle">精品小吃</div>
+			<div class="col-6 col-md-2 fontStyle alignStyle"><input type="checkbox" checked="true" onclick="changeSelect(checked,ice);" class="checkboxStyle">冰乐</div>
 		</div>
 		<div class="row">
 			<div class="col-6 col-md-2 typeStyle">search</div>
-			<div class="col-6 col-md-10">
-				<input type="text" value="" onchange="searchName(value)" class="searchType"/>
-			</div>
+			<div class="col-6 col-md-10"><input type="text" value="" onchange="searchName(value)" class="searchType"/></div>
 		</div>
 	</div>
 	<section>
@@ -210,7 +199,7 @@
 	       		<div class="row">
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt=""/>
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt=""/>
 						</div>
 						<div class="row no-gutters">
 							<h6>意式浓缩咖啡 ￥12</h6>
@@ -223,7 +212,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg"  class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -237,7 +226,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -251,7 +240,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -265,7 +254,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -279,7 +268,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt=""/>
+							<img src="images/menu1.jpg" class="img-fluid img-style  img-style" alt=""/>
 						</div>
 
 						<div class="row no-gutters">
@@ -293,7 +282,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg"class="img-fluid img-style  img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters" >
@@ -307,7 +296,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -321,7 +310,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -335,7 +324,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -349,7 +338,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -363,7 +352,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 						<div class="row no-gutters">
 							<h6>抹茶拿铁 ￥16</h6>
@@ -383,7 +372,7 @@
 	       		<div class="row">
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -397,7 +386,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -411,7 +400,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -425,7 +414,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -439,7 +428,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -453,7 +442,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -467,7 +456,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -481,7 +470,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -495,7 +484,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -509,7 +498,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -523,7 +512,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -544,7 +533,7 @@
 	       		<div class="row">
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -558,7 +547,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -572,7 +561,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -586,7 +575,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -600,7 +589,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -614,7 +603,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -628,7 +617,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -642,7 +631,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -656,7 +645,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -670,7 +659,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -684,7 +673,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -698,7 +687,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -712,7 +701,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -726,7 +715,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -740,7 +729,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -761,7 +750,7 @@
 	       		<div class="row">
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -775,7 +764,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -789,7 +778,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -803,7 +792,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -817,7 +806,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -831,7 +820,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -845,7 +834,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -859,7 +848,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -873,7 +862,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -887,7 +876,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -901,7 +890,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -915,7 +904,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -929,7 +918,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -943,7 +932,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -957,7 +946,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -971,7 +960,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -985,7 +974,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -999,7 +988,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -1013,7 +1002,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -1027,7 +1016,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -1041,7 +1030,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -1055,7 +1044,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -1069,7 +1058,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -1083,7 +1072,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -1097,7 +1086,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -1111,7 +1100,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -1125,7 +1114,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -1139,7 +1128,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -1153,7 +1142,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -1167,7 +1156,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -1188,7 +1177,7 @@
 	       		<div class="row">
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -1202,7 +1191,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -1216,7 +1205,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -1230,7 +1219,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -1244,7 +1233,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -1258,7 +1247,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -1272,7 +1261,7 @@
 					</div>
 					<div>
 						<div>
-							<img src="images/menu1.jpg" style="margin-right:35px" height='400' width='250' class="img-fluid" alt="restaurant">
+							<img src="images/menu1.jpg" class="img-fluid img-style" alt="restaurant">
 						</div>
 
 						<div class="row no-gutters">
@@ -1429,8 +1418,9 @@
 	<!-- easing -->
 	<script src="js/easing.js"></script>
 	<!--  necessary snippets for few javascript files -->
+
 	<script src="js/coffee.js"></script>
-	<script src="js/menu.js"></script>
+
 	<!-- //Js files -->
 
 </body>
