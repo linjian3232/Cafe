@@ -5,7 +5,7 @@ public class Food
 	private String FoodId;
 	private String FoodName;
 	private String FoodType;
-	private Integer FoodStock;
+	private long FoodStock;
 	private String FoodUnit;
 	private String FoodImg;
 	private double FoodPrice;
@@ -37,12 +37,12 @@ public class Food
 	{
 		this.FoodType = type;
 	}
-	public Integer getFoodStock()
+	public long getFoodStock()
 	{
 		return this.FoodStock;
 	}
 
-	public void setFoodStock(Integer stock)
+	public void setFoodStock(long stock)
 	{
 		this.FoodStock = stock;
 	}

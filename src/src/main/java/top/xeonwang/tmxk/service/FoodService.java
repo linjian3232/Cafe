@@ -7,11 +7,11 @@ import top.xeonwang.tmxk.domain.Food;
 public interface FoodService
 {
 	//增加菜单
-	public void AddFood(String FoodName,String FoodType,Integer FoodStore,String FoodUnit,String FoodImg,double FoodPrice);
+	public void AddFood(String FoodId,String FoodName,String FoodType,long FoodStore,String FoodUnit,String FoodImg,double FoodPrice);
 	//修改菜单
 	public void UpdateName(String FoodId,String FoodName);
 	public void UpdateType(String FoodId,String FoodType);
-	public void UpdateStore(String FoodId,Integer FoodStore);
+	public void UpdateStore(String FoodId,long FoodStore);
 	public void UpdateUnit(String FoodId,String FoodUnit);
 	public void UpdateImg(String FoodId,String FoodImg);
 	public void UpdatePrice(String FoodId,double FoodPrice);

@@ -14,10 +14,10 @@ public class FoodServiceImpl implements FoodService
 	private FoodMapper foodmapper;
 	
 	@Override
-	public void AddFood(String FoodName, String FoodType, Integer FoodStore, String FoodUnit, String FoodImg,double FoodPrice)
+	public void AddFood(String FoodId,String FoodName, String FoodType, long FoodStore, String FoodUnit, String FoodImg,double FoodPrice)
 	{
 		// TODO Auto-generated method stub
-		foodmapper.AddFood(FoodName, FoodType, FoodStore, FoodUnit, FoodImg,FoodPrice);
+		foodmapper.AddFood(FoodId,FoodName, FoodType, FoodStore, FoodUnit, FoodImg,FoodPrice);
 	}
 
 	@Override
@@ -35,7 +35,7 @@ public class FoodServiceImpl implements FoodService
 	}
 
 	@Override
-	public void UpdateStore(String FoodId, Integer FoodStore)
+	public void UpdateStore(String FoodId, long FoodStore)
 	{
 		// TODO Auto-generated method stub
 		foodmapper.UpdateStore(FoodId, FoodStore);
