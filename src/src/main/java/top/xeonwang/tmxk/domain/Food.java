@@ -5,9 +5,10 @@ public class Food
 	private String FoodId;
 	private String FoodName;
 	private String FoodType;
-	private Integer FoodStock;
+	private long FoodStock;
 	private String FoodUnit;
 	private String FoodImg;
+	private double FoodPrice;
 
 	public String getFoodId()
 	{
@@ -36,12 +37,12 @@ public class Food
 	{
 		this.FoodType = type;
 	}
-	public Integer getFoodStock()
+	public long getFoodStock()
 	{
 		return this.FoodStock;
 	}
 
-	public void setFoodStock(Integer stock)
+	public void setFoodStock(long stock)
 	{
 		this.FoodStock = stock;
 	}
@@ -64,4 +65,14 @@ public class Food
 		this.FoodImg = img;
 	}
 
+	public double getFoodPrice()
+	{
+		return this.FoodPrice;
+	}
+
+	public void setFoodPrice(double price)
+	{
+		this.FoodPrice = price;
+	}
+	
 }
