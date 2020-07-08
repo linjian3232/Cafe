@@ -42,18 +42,14 @@ function publish(){
         data:{
         	"goods_name":$("#goods_name").val(),
         	"goods_type":$("#goods_type").val(),
-        	"goods_desc":$("#goods_desc").val(),
+        	"goods_stock":$("#goods_stock").val(),
         	"goods_price":$("#goods_price").val(),
+			"goods_unit":$("#goods_unit").val(),
         	"goods_image":imgURL,
         },
         success:function(data){
-            if(data=="new")
-                window.location.href='http://'+window.location.host+'/SecondDemo/pages/login.html';
-            else
-            {
-                alert(data);
-                window.location.href="http://"+window.location.host+"/SecondDemo/pages/home.html";
-            }   
+            if(data.message=="OK")
+                alert("上传成功！");
         },
         error : function(e) {
             alert("出错");
