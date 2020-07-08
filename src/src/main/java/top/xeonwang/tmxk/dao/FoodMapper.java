@@ -18,5 +18,6 @@ public interface FoodMapper
 	public String FindByName(@Param("FoodName") String FoodName);
 	//删除菜单
 	public void DropFood(@Param("FoodId") String FoodId);
+	//获取全部菜品
 	
 }

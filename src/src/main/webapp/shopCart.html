@@ -2,7 +2,7 @@
 <html lang="zxx">
 
 <head>
-	<title>展廊</title>
+	<title>购物车</title>
 	<!-- Meta tag Keywords -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8" />
@@ -22,11 +22,11 @@
 	<!-- Custom-Files -->
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<!-- Bootstrap-Core-CSS -->
-	<link rel="stylesheet" href="css/lightbox.css" type="text/css" media="all">
-	<!-- Lightbox -->
+	<!-- Flexslider-CSS -->
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
 	<!-- Style-CSS -->
 	<link rel="stylesheet" href="css/fontawesome-all.css">
+	<link rel="stylesheet" href="css/shopcart.css">
 	<!-- Font-Awesome-Icons-CSS -->
 	<!-- //Custom-Files -->
 	<link rel="shortcut icon" href="images/favicon.ico">
@@ -34,12 +34,6 @@
 	<link href="http://fonts.googleapis.com/css?family=Arizonia&amp;subset=latin-ext" rel="stylesheet">
 	<link href="http://fonts.googleapis.com/css?family=Timmana&amp;subset=telugu" rel="stylesheet">
 	<link href="http://fonts.googleapis.com/css?family=Bellefair&amp;subset=hebrew,latin-ext" rel="stylesheet">
-	 <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap-table/1.15.4/bootstrap-table.min.css">
-        <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-        <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-        <script src="https://cdn.bootcss.com/bootstrap-table/1.15.4/bootstrap-table.min.js"></script>
-        <script src="https://cdn.bootcss.com/bootstrap-table/1.15.4/locale/bootstrap-table-zh-CN.min.js"></script>
 	<!-- //Web-Fonts -->
 
 </head>
@@ -52,7 +46,7 @@
 			<!-- logo -->
 			<h1>
 				<a class="navbar-brand" href="index.html">Coff-ood.
-					<span>Coffee And Food...</span>
+					<span>Coffee And Food</span>
 				</a>
 			</h1>
 			<!-- //logo -->
@@ -82,14 +76,14 @@
 							<a class="dropdown-item" href="about.html">团队</a>
 						</div>
 					</li>
-					<li class="nav-item active">
+					<li class="nav-item">
 						<a class="nav-link" href="gallery.html">展廊</a>
 					</li>
-					<li class="nav-item mx-lg-4">
+					<li class="nav-item mx-lg-4  active">
 						<a class="nav-link" href="menu.html">菜单</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="order.html">订单</a>
+						<a class="nav-link" href="order.html">订单 </a>
 					</li>
 					<li class="nav-item mx-lg-4">
 						<a class="nav-link" href="contact.html">个人信息</a>
@@ -116,150 +110,41 @@
 			<li class="breadcrumb-item">
 				<a href="index.html">主页</a>
 			</li>
-			<li class="breadcrumb-item active" aria-current="page">菜单上传</li>
+			<li class="breadcrumb-item active" aria-current="page">购物车</li>
 		</ol>
 	</nav>
 	<!-- breadcrumb -->
 	<!-- //inner banner -->
+	
+	
+	<div class="container">
+		<div class="table-responsive">
+		  <table class="table">
+			<caption>响应式表格布局</caption>
+			<thead>
+			  <tr>
+				<th colspan="2">产品</th>
+				<th>数量</th>
+				<th>价格(CNY)</th>
+				<th>小计</th>
+			  	<th></th>
+			  </tr>
+			</thead>
+			<tbody id="tbodyNode">
+			  	<tr id="wudidakafei">
+					<td id="1"><img src="images/3.jpg" alt="实物图" /></td>
+					<td id="2">超级无敌大咖啡</td>
+					<td id="3"><input onChange="onNumberChange(parentNode,this.value);addRow()" min="1" type="number" class="input-number" value="1"/></td>
+					<td id="4">1</td>
+					<td id="5">100</td>
+					<td id="6"><div onclick="del(parentNode.parentNode)" class="del">删除</div></td>
+				</tr>
+			</tbody>
+		  </table>
+		</div>
 
-	<!-- gallery -->
-	      <a href="javascript:;"  id="remove"><span class="hidden-480">删除</span></a>
-        <table id="mytab" class="table table-hover"></table>
-<script>
-            $('#mytab').bootstrapTable({
-                method: 'get',
-                url: "test.json", // 请求路径
-                striped: true, // 是否显示行间隔色
-                pageNumber: 1, // 初始化加载第一页
-                pagination: true, // 是否分页
-                sidePagination: 'client', // server:服务器端分页|client：前端分页
-                pageSize: 5, // 单页记录数
-                pageList: [5, 20, 30],
-                showRefresh : true,// 刷新按钮
-                queryParams: function(params) { // 上传服务器的参数
-                    var temp = {
-                        name: $("#sname").val(),
-                        viewReason: $("#viewReason").val(),
-                    };
-                    return temp;
-                },
-                columns: [{
-                    checkbox: true
-                }, {
-                    title: '用户id',
-					cellStyle: formatTableUnit,
-                    formatter: paramsMatter,
-                    field: 'UserID',
-                    
-                },  {
-                    title: '用户姓名',
-                    field: 'UserName',
-
-                },
-					{
-                    title: '用户密码',
-                    field: 'UserPwd',
-
-                },
-					{
-                    title: '用户性别',
-                    field: 'UserSex',
-                    formatter: formatSex
-                }, {
-                    title: '联系电话',
-                    field: 'UserPhone'
-                }, {
-                    title: '用户邮箱',
-                    field: 'UserEmail'
-                },  {
-                    title: '操作',
-                    field: 'id',
-                    formatter: option
-                }]
-            })
-
-            // 定义删除、更新按钮
-            function option(value, row, index) {
-                var htm = "";
-                htm += '<button id="updateinfo" UserID="' + value +
-                    '" onclick="updateinfo(' + value + ')">编辑</button>'
-                return htm;
-            }
-
-            //表格超出宽度鼠标悬停显示td内容
-            function paramsMatter(value, row, index) {
-                var span = document.createElement("span");
-                span.setAttribute("title", value);
-                span.innerHTML = value;
-                return span.outerHTML;
-            }
-            //td宽度以及内容超过宽度隐藏
-            function formatTableUnit(value, row, index) {
-                return {
-                    css: {
-                        "white-space": "nowrap",
-                        "text-overflow": "ellipsis",
-                        "overflow": "hidden",
-                        "max-width": "60px"
-                    }
-                }
-            }
-
-            // 格式化性别"sex": 0,是女  "sex": 1,是男
-            function formatSex(value, row, index) {
-                return value == 1 ? "男" : "女";
-            }
-          
-            // 删除按钮事件
-            $("#remove").on("click", function() {
-
-                if(!confirm("是否确认删除？"))
-                    return;
-                var rows = $("#mytab").bootstrapTable('getSelections'); // 获得要删除的数据
-                if(rows.length == 0) { // rows 主要是为了判断是否选中，下面的else内容才是主要
-                    alert("请先选择要删除的记录!");
-                    return;
-                } else {
-                    var ids = new Array(); // 声明一个数组
-                    $(rows).each(function() { // 通过获得别选中的来进行遍历
-                        ids.push(this.UserID); // cid为获得到的整条数据中的一列
-                    });
-
-                    //后端删除的方法
-                    deleteMs(ids)
-                }
-
-            })
-
-            // 删除访客,删除数据库内容，刷新表格即可删除
-            function deleteMs(ids) {
-                $.ajax({
-                    url: basePath + "/caller/dels?ids=" + ids,//需要修改URL
-               //     dataType: "json",
-					type : "POST",
-               //     type: "get",
-					data : {
-						"type" : "delete",
-						"ids" : ids
-					},
-                    success: function(data) {
-                        if(data > 0) {
-                            msg(6, "操作成功")
-                            $('#mytab').bootstrapTable('refresh', {
-                                url: basePath + '/caller/list'		//需要修改URL
-                            });
-                        }
-                    }
-                });
-            }
-            // 编辑访客
-            function updateinfo(id) {
-                alert("编辑")
-            }
-        </script>
-<!-- //gallery -->
-
-		<!-- footer -->
+	</div>
+	<!-- footer -->
 	<footer>
 		<div class="w3ls-footer-grids py-5">
 			<div class="container py-lg-2">
@@ -349,6 +234,7 @@
 	<!-- //footer -->
 
 
+
 	<!-- Js files -->
 	<!-- JavaScript -->
 	<script src="js/jquery-2.2.3.min.js"></script>
@@ -356,9 +242,36 @@
 	<script src="js/bootstrap.js"></script>
 	<!-- Necessary-JavaScript-File-For-Bootstrap -->
 
-	<!--  light box js -->
-	<script src="js/lightbox-plus-jquery.min.js"></script>
-	<!-- //light box js-->
+	<!-- flexSlider-for-menu-section -->
+	<script>
+		$(window).load(function () {
+			$("#flexiselDemo1").flexisel({
+				visibleItems: 4,
+				animationSpeed: 1000,
+				autoPlay: true,
+				autoPlaySpeed: 3000,
+				pauseOnHover: true,
+				enableResponsiveBreakpoints: true,
+				responsiveBreakpoints: {
+					portrait: {
+						changePoint: 414,
+						visibleItems: 1
+					},
+					landscape: {
+						changePoint: 640,
+						visibleItems: 2
+					},
+					tablet: {
+						changePoint: 800,
+						visibleItems: 3
+					}
+				}
+			});
+
+		});
+	</script>
+	<script src="js/jquery.flexisel.js"></script>
+	<!-- //flexSlider-for-menu-section -->
 
 	<!-- smooth scrolling -->
 	<script src="js/SmoothScroll.min.js"></script>
@@ -370,6 +283,7 @@
 	<script src="js/easing.js"></script>
 	<!--  necessary snippets for few javascript files -->
 	<script src="js/coffee.js"></script>
+	<script src="js/shopcart.js"></script>
 
 	<!-- //Js files -->
 
