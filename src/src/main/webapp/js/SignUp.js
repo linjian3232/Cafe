@@ -15,13 +15,12 @@ function validate_username(username){
 function validate_password(password){
     //^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6-10}$
     //测试密码：12345y
-    var passwordReg=/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6}$/;
+    var passwordReg=/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6-16}$/;
     if(password != "" && password.search(passwordReg) != -1)
     {
         document.getElementById("test_pw").innerHTML = "<font color='green' size='3px'>√密码格式正确</font>";
     }else{
         document.getElementById("test_pw").innerHTML = "<font color='red' size='3px'>密码格式错误</font>";
-        alert("密码有6位，由数字和字母组成!");
     }
 }
 //函数3：验证两次输入的密码是否一样
@@ -51,21 +50,17 @@ function validate_form(){
     if(username != "" && emailReg.test(username)){
         if(password !="" && passwordReg.test(password)){
             if(password2==password){
-                alert("信息填写正确，可以正常提交！");
                 console.log("信息填写正确，可以正常提交！");
                 return false;
             }else{
-                alert("密码不一致，提交失败，请重新填写！");
                 console.log("密码不一致，提交失败，请重新填写！");
                 return false;
             }
         }else{
-            alert("密码格式错误，提交失败，请重新填写！");
             console.log("密码格式错误，提交失败，请重新填写！");
             return false;
         }
     }else{
-        alert("注册的账号不符合要求，提交失败，请重新填写！");
         console.log("注册的账号不符合要求，提交失败，请重新填写！");
         return false;
     }
