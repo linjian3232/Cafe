@@ -1,5 +1,4 @@
  $(document).ready(function () {
-     
      //script for smooth scrolling
      jQuery(document).ready(function ($) {
          $(".scroll ").click(function (event) {

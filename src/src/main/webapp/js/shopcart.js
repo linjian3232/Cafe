@@ -28,6 +28,7 @@ function addRow(foodId,foodName,foodPrice){
     for(i=0;i<tbody.childNodes.length;i++){
         if(tbody.childNodes[i].nodeType==1){
             if(tbodyNode.childNodes[i].id==foodId)
+;
         }
     }
 //增加一行

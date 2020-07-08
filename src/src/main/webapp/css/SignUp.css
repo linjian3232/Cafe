@@ -1,26 +1,14 @@
 @charset "utf-8";
 /* CSS Document */
-  #bc
-		   {
-			   background-image: url("../images/8.jpg");
-			   
-		   }
-#bc1{
-background-image: linear-gradient(to top,#fad8be,white);
+  
+#head{
+	font-size: 50px;
 }
 #table
 {
-	margin-top: 92px;
+	margin-top: 80px;
 }
-#head{
-	background-image: linear-gradient(to top,#fbb8ac,#e6e2c3);
-	font-size: 80px;
-	height: 120px;
 
-	width: 90;
-	color: white;
-	position: relative;
-}
 		   
         *{
             margin: 0px;
@@ -46,11 +34,11 @@ background-image: linear-gradient(to top,#fad8be,white);
             margin: 15px;
         }
         .rg_left p:first-child{
-            color:#FFAC0B;
+            color:black;
             size: 20px;
         }
         .rg_left p:last-child{
-            color: #a6a6a6;
+            color: red;
             size: 20px;
         }
         .rg_center{
@@ -64,7 +52,7 @@ background-image: linear-gradient(to top,#fad8be,white);
             float: right;
         }
         .rg_right p:first-child{
-            color: white;
+            color: black;
             font-size: 15px;
         }
         .rg_right p a{
@@ -74,16 +62,16 @@ background-image: linear-gradient(to top,#fad8be,white);
             width: 100px;
             text-align: right;
             height: 45px;
-            color:white;
+            color:black;
         }
         .td_right{
             padding-left: 50px;
-            color:white;
+            color:black;
         }
         #username,#password,#email,#name,#tel,#birthday,#password2{
             width: 251px;
             height: 32px;
-            border: 1px solid#A25B34;
+            border: 1px solid black;
             /* 设置边框圆角 */
             border-radius: 5px;
             padding-left: 10px;
@@ -105,7 +93,8 @@ background-image: linear-gradient(to top,#fad8be,white);
         #btn_sub{
             width: 150px;
             height: 40px;
-            background-color: #ffd026;
+            background-color: red;
+			color:azure;
             border: 1px solid #a6a6a6;
 			 border-radius: 5px;
             padding-left: 10px;
@@ -117,5 +106,6 @@ background-image: linear-gradient(to top,#fad8be,white);
             background-color: #CBC2C2;
             border: 1px solid #a6a6a6;
 			 border-radius: 5px;
+	color:azure;
             padding-left: 10px;
 }
