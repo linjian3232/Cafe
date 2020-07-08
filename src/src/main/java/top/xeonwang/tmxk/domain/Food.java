@@ -8,6 +8,7 @@ public class Food
 	private Integer FoodStock;
 	private String FoodUnit;
 	private String FoodImg;
+	private double FoodPrice;
 
 	public String getFoodId()
 	{
@@ -64,4 +65,14 @@ public class Food
 		this.FoodImg = img;
 	}
 
+	public double getFoodPrice()
+	{
+		return this.FoodPrice;
+	}
+
+	public void setFoodPrice(double price)
+	{
+		this.FoodPrice = price;
+	}
+	
 }
