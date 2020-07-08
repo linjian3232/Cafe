@@ -23,6 +23,7 @@ create table if not exists FOOD(
     foodtype char(1) not null, /*食物类型*/
     foodstock long not null,/*库存量*/
     foodunit varchar(10) not null,/*单位*/
+    foodprice double not null,
     foodimg char(100) not null /*食物图片路径*/
 );
 

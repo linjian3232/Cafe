@@ -9,9 +9,9 @@ import top.xeonwang.tmxk.domain.Food;
 
 @Controller
 public class menuController {
-	@RequestMapping("/getMenu")
+	@RequestMapping("/getMenuList")
 	public void getMenu() {
 		ArrayList<Food> lf=new ArrayList<Food>();
-		
+		System.out.println("getMenu");
 	}
 }
