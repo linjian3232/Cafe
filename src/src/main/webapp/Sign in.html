@@ -11,15 +11,8 @@
 	<meta charset="UTF-8" />
 	<meta name="keywords" content=""
 	/>
-	<script>
-		addEventListener("load", function () {
-			setTimeout(hideURLbar, 0);
-		}, false);
-
-		function hideURLbar() {
-			window.scrollTo(0, 1);
-		}
-	</script>
+	
+	<script type="text/javascript" src="js/SignIn.js">	</script>
 	<!--// Meta tag Keywords -->
 
 	<!-- Custom-Files -->
@@ -153,7 +146,7 @@
 
 				<input type="text"
 
-					placeholder="输入用户名" />
+					placeholder="输入用户名" id="userName"/>
 
 			</div>
 		
@@ -162,7 +155,7 @@
 
 				<img src="images/password.jpg" width="20" height="20" alt=""/>
 
-				<input type="password"
+				<input type="password" id="password"
 
 					placeholder="输入用户密码" />
 
@@ -170,7 +163,7 @@
 <br>
 			<div class="logC">
 
-				<a href="index_login.html" target="_self"><button style="background: #ED0000">登 录</button></a>
+				<a href="index_login.html" target="_self"><button style="background: #ED0000" onClick="SignIn();">登 录</button></a>
 
 			</div>
 		<br>
