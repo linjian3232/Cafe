@@ -2,9 +2,13 @@ package top.xeonwang.tmxk.service.impl;
 
 import javax.annotation.Resource;
 
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import top.xeonwang.tmxk.dao.UserMapper;
 import top.xeonwang.tmxk.service.UserService;
-
+@Service("UserService")
+@Transactional
 public class UserServiceImpl implements UserService
 {
 	@Resource

@@ -1,5 +1,7 @@
 package top.xeonwang.tmxk.service;
 
+import org.springframework.stereotype.Service;
+
 public interface OFUService
 {
 	//新建 订单-食物-用户
