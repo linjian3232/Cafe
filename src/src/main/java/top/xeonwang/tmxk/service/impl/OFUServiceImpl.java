@@ -2,9 +2,13 @@ package top.xeonwang.tmxk.service.impl;
 
 import javax.annotation.Resource;
 
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import top.xeonwang.tmxk.dao.OFUMapper;
 import top.xeonwang.tmxk.service.OFUService;
-
+@Service("OFUService")
+@Transactional
 public class OFUServiceImpl implements OFUService
 {
 	@Resource

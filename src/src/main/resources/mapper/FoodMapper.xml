@@ -14,7 +14,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		foodname = #{FoodName}
 	</select>
 	
-	<select id="getAll" resultType="String">
+	<select id="GetAll" resultType="String">
 		SELECT * FROM tmxk.FOOD
 	</select>
 

@@ -1,5 +1,7 @@
 package top.xeonwang.tmxk.service;
 
+import org.springframework.stereotype.Service;
+
 public interface OAService
 {
 	//新建 订单-管理员-用户

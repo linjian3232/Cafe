@@ -2,9 +2,13 @@ package top.xeonwang.tmxk.service.impl;
 
 import javax.annotation.Resource;
 
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import top.xeonwang.tmxk.dao.OrderMapper;
 import top.xeonwang.tmxk.service.OrderService;
-
+@Service("OrderService")
+@Transactional
 public class OrderServiceImpl implements OrderService
 {
 	@Resource

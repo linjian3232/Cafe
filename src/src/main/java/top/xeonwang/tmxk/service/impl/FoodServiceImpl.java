@@ -4,10 +4,15 @@ import java.util.ArrayList;
 
 import javax.annotation.Resource;
 
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import top.xeonwang.tmxk.dao.FoodMapper;
 import top.xeonwang.tmxk.domain.Food;
 import top.xeonwang.tmxk.service.FoodService;
 
+@Service("FoodService")
+@Transactional
 public class FoodServiceImpl implements FoodService
 {
 	@Resource

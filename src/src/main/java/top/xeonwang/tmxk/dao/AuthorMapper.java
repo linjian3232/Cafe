@@ -1,7 +1,8 @@
 package top.xeonwang.tmxk.dao;
 
 import org.apache.ibatis.annotations.Param;
-
+import org.springframework.stereotype.Repository;
+@Repository
 public interface AuthorMapper
 {
 	//新建权限

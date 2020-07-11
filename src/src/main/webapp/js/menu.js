@@ -42,6 +42,15 @@ function addOne(src,name,price,type){
 				  '</div></div></div></div>';
     var root=document.getElementById(type);
     root.childNodes[3].appendChild(div);
+     $.ajax({
+    	        type: "POST",
+    	        url: "getMenuList.action",
+    		contentType:"application/x-www-form-urlencoded",  
+    		data:{"a":"b"},
+    	        success: function (data) {
+    		
+    	        }
+    	    });
 }
 var food1={
     "id":"wudikafei2",
