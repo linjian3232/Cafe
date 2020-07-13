@@ -2,6 +2,8 @@ package top.xeonwang.tmxk.service;
 
 import java.util.ArrayList;
 
+import org.springframework.stereotype.Service;
+
 import top.xeonwang.tmxk.domain.Food;
 
 public interface FoodService

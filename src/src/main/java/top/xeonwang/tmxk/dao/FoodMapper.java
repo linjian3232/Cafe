@@ -3,9 +3,10 @@ package top.xeonwang.tmxk.dao;
 import java.util.ArrayList;
 
 import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Repository;
 
 import top.xeonwang.tmxk.domain.Food;
-
+@Repository
 public interface FoodMapper
 {
 	//增加菜单

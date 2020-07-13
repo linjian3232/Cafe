@@ -37,12 +37,8 @@
 				<!-- mybatis分页插件 -->
 				<bean class="com.github.pagehelper.PageInterceptor">
 					<property name="properties">
-						<!-- 
-						helperDialect:连接数据库的类型
-						 -->
-						<value>
-							helperDialect=mysql
-						</value>
+						<!-- helperDialect:连接数据库的类型 -->
+						<value>helperDialect=mysql</value>
 					</property>
 				</bean>
 			</array>

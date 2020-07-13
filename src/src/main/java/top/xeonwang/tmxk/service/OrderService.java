@@ -1,5 +1,7 @@
 package top.xeonwang.tmxk.service;
 
+import top.xeonwang.tmxk.domain.OrderInf;
+
 public interface OrderService
 {
 	//增加订单
@@ -10,4 +12,6 @@ public interface OrderService
 	
 	//删除订单
 	public void DropOrder(String OrderId);
+	
+	public OrderInf Get_all_info(String OrderId);
 }

@@ -1,5 +1,7 @@
 package top.xeonwang.tmxk.service;
 
+import org.springframework.stereotype.Service;
+
 public interface AuthorService
 {
 	//新建权限

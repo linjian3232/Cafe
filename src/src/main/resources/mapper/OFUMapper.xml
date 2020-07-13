@@ -4,14 +4,47 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="top.xeonwang.tmxk.dao.OFUMapper">
-	<insert id = "AddOFU">
-		INSERET INTO OFU(orderid,foodid,foodnumber)
-		Values(#{OrderId},#{FoodId},#{FoodNumber})	
+	<insert id="AddOFU">
+		INSERET INTO tmxk.OFU(orderid,foodid,foodnumber)
+		Values(#{OrderId},#{FoodId},#{FoodNumber})
 	</insert>
-	
+
 	<delete id="DropOA">
-	DELETE FROM OFU	
-	WHERE orderid = #{OrderId} and foodid = #{FoodId} and foodnumber = #{FoodNumber}
+		DELETE FROM tmxk.OFU
+		WHERE orderid = #{OrderId} and
+		foodid
+		= #{FoodId} and foodnumber =
+		#{FoodNumber}
 	</delete>
+
+	<select id="GetAll_OrderInf">
+		SELECT DISTINCT foodid,foodname,foodnumber
+		FROM(
+		SELECT
+		food.foodid,food.foodname,foodnumber,orderid
+		FROM
+		OFU,FOOD
+		WHERE
+		ofu.foodid = food.foodid
+		) AS A
+		WHERE orderid = #{OrderId}
+	</select>
+
+	<select id="Sum_FoodNumber">
+		SELECT
+		foodid,foodname,
+		SUM( foodnumber ) AS sum
+		FROM
+		(
+		SELECT
+		food.foodid, food.foodname, foodnumber FROM OFU, FOOD WHERE
+		ofu.foodid
+		= food.foodid ) AS A
+		GROUP BY
+		foodid
+		ORDER BY
+		sum DESC
+	</select>
+
 
 </mapper>

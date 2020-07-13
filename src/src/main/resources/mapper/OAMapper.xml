@@ -13,5 +13,11 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	DELETE FROM OA	
 	WHERE orderid = #{OrderId} and adminid = #{AdminId} and userid = #{UserId}
 	</delete>
+	
+	<select id="GetUser_Order">
+		SELECT orderid
+		FROM OA
+		WHERE userid=#{UserId}
+	</select>
 
 </mapper>
