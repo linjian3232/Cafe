@@ -10,18 +10,19 @@
         http://www.springframework.org/schema/mvc/spring-mvc.xsd
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
+        
 
 	<!-- 扫描Controller所在的包 -->
 	<contenxt:component-scan base-package="top.xeonwang.tmxk.controller"/>
-
 	<!-- 注解驱动 -->
 	<mvc:annotation-driven></mvc:annotation-driven>
-	<mvc:resources location="/js/" mapping="/js/**"></mvc:resources>
-	<mvc:resources location="/css/" mapping="/css/**"></mvc:resources>
+	
+	<mvc:resources location="/js/" mapping="/js/*"></mvc:resources>
+	<mvc:resources location="/css/" mapping="/css/*"></mvc:resources>
 	<!-- 视图解析器:简化在Controller类编写的视图路径 -->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<!-- 前缀 -->
-		<property name="prefix" value="/"/>
+		<property name="prefix" value="/WEB-INF/"/>
 		<!-- 后缀 -->
 		<property name="suffix" value=".html"/>
 	</bean>

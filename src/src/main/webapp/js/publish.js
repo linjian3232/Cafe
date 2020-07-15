@@ -22,7 +22,7 @@ $("#uploadImage").fileinput({
     var response = data.response;  
     alert(response.msg);
     if ( response.result == 'ok') {
-    	imgURL=response.imgURL;
+        imgURL = response.imgURL;
         //document.getElementById("img").value = response.url;
     }
     

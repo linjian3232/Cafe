@@ -7,23 +7,29 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import top.xeonwang.tmxk.domain.Food;
 import top.xeonwang.tmxk.service.FoodService;
-
+import top.xeonwang.tmxk.service.UserService;
+import top.xeonwang.tmxk.util.GetRandomId;
 
 @Controller
 public class menuController {
 	@Resource
 	private FoodService foodservice;
-	
+	@Resource
+	private UserService userService;
 	//获取菜单
 	@RequestMapping("/getMenuList")
+	@ResponseBody
 	public ArrayList<Food> getMenu() {
-		ArrayList<Food> lf=new ArrayList<Food>();
-//		System.out.println("getMenu");
-		lf = foodservice.GetAll();
-		return lf;
+		System.out.println("getMenu");
+		if(foodservice.GetAll().size()==0) {
+			System.out.println("false");
+			return null;
+		}
+		return foodservice.GetAll();
 	}
 	
 	//新增菜单
@@ -42,9 +48,4 @@ public class menuController {
 		
 		return "OK";
 	}
-	
-	
-	
-	
-	
 }
