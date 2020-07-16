@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import top.xeonwang.tmxk.domain.Food;
 import top.xeonwang.tmxk.service.FoodService;
@@ -19,15 +20,17 @@ public class menuController {
 	
 	//获取菜单
 	@RequestMapping("/getMenuList")
+	@ResponseBody
 	public ArrayList<Food> getMenu() {
 		ArrayList<Food> lf=new ArrayList<Food>();
-//		System.out.println("getMenu");
 		lf = foodservice.GetAll();
+		System.out.println("no id ont ");
 		return lf;
 	}
 	
 	//新增菜单
 	@RequestMapping("/addMenuList")
+	@ResponseBody
 	public String addMenu(HttpServletRequest request)
 	{
 		String FoodName = request.getParameter("goods_name");
@@ -36,7 +39,7 @@ public class menuController {
 		String FoodUnit = request.getParameter("goods_unit");
 		String FoodImg = request.getParameter("goods_image");
 		double FoodPrice = Double.parseDouble(request.getParameter("goods_price"));
-		String FoodId = GetRandomId.GetRandomString(10);
+		String FoodId = null;
 		
 		foodservice.AddFood(FoodId,FoodName, FoodType, FoodStock, FoodUnit, FoodImg, FoodPrice);
 		
