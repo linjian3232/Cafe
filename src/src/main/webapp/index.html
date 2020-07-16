@@ -62,39 +62,31 @@
 							<span class="sr-only">(current)</span>
 						</a>
 					</li>
-					<li class="nav-item mx-lg-4">
+					<li class="nav-item mx-lg-3">
 						<a class="nav-link" href="about.html">关于我们</a>
 					</li>
-					<li class="nav-item dropdown mr-lg-4">
-						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
-						    aria-expanded="false">
-							页面
-						</a>
-						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="menu.html">菜单</a>
-							<a class="dropdown-item scroll" href="#services">服务</a>
-							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="about.html">团队</a>
-						</div>
-					</li>
-					<li class="nav-item">
+					<li class="nav-item mx-lg-3">
 						<a class="nav-link" href="gallery.html">展廊</a>
 					</li>
-					<li class="nav-item mx-lg-4">
+					<li class="nav-item mx-lg-3">
 						<a class="nav-link" href="menu.html">菜单</a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="order.html">订单 </a>
+					
+					
+					<li class="nav-item mx-lg-3" id="btnSignin">
+						<a class="nav-link" href="Signin.html">登录</a>
 					</li>
-					<li class="nav-item  mx-lg-4">
+					<li class="nav-item  mx-lg-3" id="btnSignup">
+						<a class="nav-link" href="Signup.html">注册</a>
+					</li>
+					
+					<li class="nav-item mx-lg-3" id="btnInfo" hidden="true">
 						<a class="nav-link" href="contact.html">个人信息</a>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="Sign in.html">登录</a>
+					<li class="nav-item  mx-lg-3" id="btnSignout" hidden="true">
+						<a class="nav-link" href="Signup.html">注销</a>
 					</li>
-					<li class="nav-item  mx-lg-4">
-						<a class="nav-link" href="Sign up.html">注册</a>
-					</li>
+					
 				</ul>
 			</div>
 		</nav>
@@ -227,7 +219,7 @@
 						<li class="mb-3">
 							<i class="fas fa-hand-point-right mr-3"></i>集中西餐、中餐、日本料理于一家，菜式别具一格，独具特色</li>
 						<li class="mb-3">
-							<i class="fas fa-hand-point-right mr-3"></i>安静的场所，为您带来心灵的慰藉和生活创作的灵感，扫除一身的疲惫</i></li>
+							<i class="fas fa-hand-point-right mr-3"></i>安静的场所，为您带来心灵的慰藉和生活创作的灵感，扫除一身的疲惫</li>
 						<li>
 							<i class="fas fa-hand-point-right mr-3"></i>为您营造完美的时尚娱乐空间、特色餐饮，温馨环境，周到服务，带给都市人韩商场林立的休闲体验</li>
 					</ul>
@@ -335,16 +327,10 @@
 									<a href="gallery.html" class="">展廊</a>
 								</li>
 								<li class="mb-2">
-									<a href="contact.html" class="">个人信息</a>
-								</li>
-								<li class="mb-2">
-									<a href="order.html" class="">订单</a>
-								</li>
-								<li class="mb-2">
-									<a href="Sign up.html" class="">注册</a>
+									<a href="Signup.html" class="">注册</a>
 								</li>
 								<li>
-									<a href="Sign in.html" class="">登录</a>
+									<a href="Signin.html" class="">登录</a>
 								</li>
 							</ul>
 						</div>
@@ -401,6 +387,7 @@
 	<!-- Js files -->
 	<!-- JavaScript -->
 	<script src="js/jquery-2.2.3.min.js"></script>
+	<script src="js/jquery.cookie.js"></script>
 	<!-- Default-JavaScript-File -->
 	<script src="js/bootstrap.js"></script>
 	<!-- Necessary-JavaScript-File-For-Bootstrap -->
@@ -416,6 +403,7 @@
 	<!--  necessary snippets for few javascript files -->
 	<script src="js/coffee.js"></script>
 	<script src="js/index.js"></script>
+	<script src="js/cookie.js"></script>
 	<!-- //Js files -->
 
 </body>

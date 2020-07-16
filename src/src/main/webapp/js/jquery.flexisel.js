@@ -13,28 +13,28 @@
 
     $.fn.flexisel = function (options) {
 
-        var defaults = $.extend({
-    		visibleItems: 4,
-    		animationSpeed: 200,
-    		autoPlay: false,
-    		autoPlaySpeed: 3000,    		
-    		pauseOnHover: true,
-			setMaxWidthAndHeight: false,
-    		enableResponsiveBreakpoints: false,
-    		responsiveBreakpoints: { 
-	    		portrait: { 
-	    			changePoint:480,
-	    			visibleItems: 1
-	    		}, 
-	    		landscape: { 
-	    			changePoint:640,
-	    			visibleItems: 2
-	    		},
-	    		tablet: { 
-	    			changePoint:768,
-	    			visibleItems: 3
-	    		}
-        	}
+	var defaults = $.extend({
+		visibleItems: 4,
+		animationSpeed: 200,
+		autoPlay: false,
+		autoPlaySpeed: 3000,    		
+		pauseOnHover: true,
+		setMaxWidthAndHeight: false,
+		enableResponsiveBreakpoints: false,
+		responsiveBreakpoints: { 
+		portrait: { 
+			changePoint:480,
+			visibleItems: 1
+		}, 
+		landscape: { 
+			changePoint:640,
+			visibleItems: 2
+		},
+		tablet: { 
+			changePoint:768,
+			visibleItems: 3
+		}
+	}
         }, options);
         
 		/******************************
@@ -52,34 +52,30 @@
 		*******************************/        
         
         var methods = {
-        		
 			init: function() {
-				
-        		return this.each(function () {
-        			methods.appendHTML();
-        			methods.setEventHandlers();      			
-        			methods.initializeItems();
+				return this.each(function () {
+					methods.appendHTML();
+					methods.setEventHandlers();      			
+					methods.initializeItems();
 				});
 			},
 
 			/******************************
 			Initialize Items
 			*******************************/			
-			
 			initializeItems: function() {
-				
 				var listParent = object.parent();
 				var innerHeight = listParent.height(); 
 				var childSet = object.children();
+				var innerWidth = listParent.width(); // Set widths
 				
-    			var innerWidth = listParent.width(); // Set widths
-    			itemsWidth = (innerWidth)/itemsVisible;
-    			childSet.width(itemsWidth);
-    			childSet.last().insertBefore(childSet.first());
-    			childSet.last().insertBefore(childSet.first());
-    			object.css({'left' : -itemsWidth}); 
+				itemsWidth = (innerWidth)/itemsVisible;
+				childSet.width(itemsWidth);
+				childSet.last().insertBefore(childSet.first());
+				childSet.last().insertBefore(childSet.first());
+				object.css({'left' : -itemsWidth}); 
 
-    			object.fadeIn();
+				object.fadeIn();
 				$(window).trigger("resize"); // needed to position arrows correctly
 
 			},
@@ -91,20 +87,20 @@
 			
 			appendHTML: function() {
 				
-   			 	object.addClass("nbs-flexisel-ul");
-   			 	object.wrap("<div class='nbs-flexisel-container'><div class='nbs-flexisel-inner'></div></div>");
-   			 	object.find("li").addClass("nbs-flexisel-item");
- 
-   			 	if(settings.setMaxWidthAndHeight) {
-	   			 	var baseWidth = $(".nbs-flexisel-item > img").width();
-	   			 	var baseHeight = $(".nbs-flexisel-item > img").height();
-	   			 	$(".nbs-flexisel-item > img").css("max-width", baseWidth);
-	   			 	$(".nbs-flexisel-item > img").css("max-height", baseHeight);
-   			 	}
- 
-   			 	$("<div class='nbs-flexisel-nav-left'></div><div class='nbs-flexisel-nav-right'></div>").insertAfter(object);
-   			 	var cloneContent = object.children().clone();
-   			 	object.append(cloneContent);
+			object.addClass("nbs-flexisel-ul");
+			object.wrap("<div class='nbs-flexisel-container'><div class='nbs-flexisel-inner'></div></div>");
+			object.find("li").addClass("nbs-flexisel-item");
+
+			if(settings.setMaxWidthAndHeight) {
+				var baseWidth = $(".nbs-flexisel-item > img").width();
+				var baseHeight = $(".nbs-flexisel-item > img").height();
+				$(".nbs-flexisel-item > img").css("max-width", baseWidth);
+				$(".nbs-flexisel-item > img").css("max-height", baseHeight);
+			}
+
+			$("<div class='nbs-flexisel-nav-left'></div><div class='nbs-flexisel-nav-right'></div>").insertAfter(object);
+			var cloneContent = object.children().clone();
+			object.append(cloneContent);
 			},
 					
 			
@@ -136,15 +132,12 @@
 					rightArrow.css("top", arrowMargin + "px");
 					
 				});					
-				
 				$(leftArrow).on("click", function (event) {
 					methods.scrollLeft();
 				});
-				
 				$(rightArrow).on("click", function (event) {
 					methods.scrollRight();
 				});
-				
 				if(settings.pauseOnHover == true) {
 					$(".nbs-flexisel-item").on({
 						mouseenter: function () {
@@ -153,7 +146,7 @@
 						mouseleave: function () {
 							canNavigate = true;
 						}
-					 });
+					});
 				}
 
 				if(settings.autoPlay == true) {

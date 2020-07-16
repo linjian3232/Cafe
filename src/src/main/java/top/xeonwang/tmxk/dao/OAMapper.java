@@ -1,7 +1,8 @@
 package top.xeonwang.tmxk.dao;
 
 import org.apache.ibatis.annotations.Param;
-
+import org.springframework.stereotype.Repository;
+@Repository
 public interface OAMapper
 {
 	//新建 订单-管理员-用户

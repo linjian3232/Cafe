@@ -1,5 +1,7 @@
 package top.xeonwang.tmxk.service;
 
+import org.springframework.stereotype.Service;
+
 public interface AdminService
 {
 public void AddAdmin(String AdminId,String AdminName,String AdminPos);
