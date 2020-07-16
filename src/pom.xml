@@ -219,6 +219,7 @@
   <build>
     <finalName>tmxk</finalName>
     <plugins>
+    
         <!-- 指定jdk -->
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
@@ -234,4 +235,3 @@
     </plugins>
   </build>
 </project>
-
