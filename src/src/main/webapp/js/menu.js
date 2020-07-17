@@ -44,8 +44,8 @@ function addOne(src,name,price,type){
      $.ajax({
     	        type: "POST",
     	        url: "getMenuList.action",
-    		contentType:"application/x-www-form-urlencoded",  
-    		data:{"a":"b"},
+                contentType:"application/x-www-form-urlencoded",
+                data:{"a":"b"},
     	        success: function (data) {
     		
     	        }

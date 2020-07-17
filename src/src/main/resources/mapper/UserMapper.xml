@@ -53,5 +53,12 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	DELETE FROM USER	
 	WHERE userid = #{UserId}
 	</delete>
-
+	
+	<select id="ValidateUser" resultType="String">
+		SELECT userid	
+		FROM
+		tmxk.USER
+		where
+		username = #{UserName} and userpwd = #{UserPwd}
+	</select>
 </mapper>

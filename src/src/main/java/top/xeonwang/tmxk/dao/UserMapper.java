@@ -20,5 +20,7 @@ public interface UserMapper
 	public String FindByName_Phone(@Param("UserName") String UserName,@Param("UserPhone") String UserPhone);
 //	删除用户
 	public void DropUser(@Param("UserId") String UserId);
+// 	验证用户
+	public String ValidateUser(@Param("UserName")String UserName, @Param("UserPwd")String UserPwd);
 	
 }

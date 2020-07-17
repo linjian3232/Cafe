@@ -17,6 +17,7 @@ public interface UserService
 //	删除用户
 	public void DropUser(String UserId);
 	
-	
+// 验证用户
+	public String ValidateUser(String UserName, String UserPwd);
 	
 }

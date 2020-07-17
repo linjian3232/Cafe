@@ -1,51 +1,27 @@
 // JavaScript Document
-
 function a(){location.href='Sign in.html';}
-
 function validate_username(username){
-
     //定义正则表达式的变量:邮箱正则
-
     var emailReg=/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
-
     //console.log(username);
-
     if(username !="" && username.search(emailReg) != -1)
-
     {
-
         document.getElementById("test_user").innerHTML = "<font color='green' size='3px'>√邮箱格式正确</font>";
-
     }else{
-
         document.getElementById("test_user").innerHTML = "<font color='red' size='3px'>邮箱格式错误</font>";
-
     }
-
 }
-
 //函数2：验证密码是否符合要求：匹配6位密码，由数字和字母组成：
-
 function validate_password(password){
-
     //^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6-10}$
-
     //测试密码：12345y
-
     var passwordReg=/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,16}$/;
-
     if(password != "" && password.search(passwordReg) != -1)
-
     {
-
         document.getElementById("test_pw").innerHTML = "<font color='green' size='3px'>√密码格式正确</font>";
-
     }else{
-
         document.getElementById("test_pw").innerHTML = "<font color='red' size='3px'>密码格式错误</font>";
-
     }
-
 }
 
 //函数3：验证两次输入的密码是否一样
