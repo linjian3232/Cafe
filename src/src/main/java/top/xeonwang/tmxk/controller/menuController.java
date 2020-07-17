@@ -14,6 +14,7 @@ import top.xeonwang.tmxk.service.FoodService;
 import top.xeonwang.tmxk.service.UserService;
 import top.xeonwang.tmxk.util.GetRandomId;
 
+
 @Controller
 public class menuController {
 	@Resource
@@ -34,6 +35,7 @@ public class menuController {
 	
 	//新增菜单
 	@RequestMapping("/addMenuList")
+	@ResponseBody
 	public String addMenu(HttpServletRequest request)
 	{
 		String FoodName = request.getParameter("goods_name");
@@ -48,4 +50,9 @@ public class menuController {
 		
 		return "OK";
 	}
+	
+	
+	
+	
+	
 }

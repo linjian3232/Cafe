@@ -1,4 +1,3 @@
-
 function changeSelect(checked,type){
     if(checked==false){
         type.hidden=true;
