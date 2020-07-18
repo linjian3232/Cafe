@@ -1,3 +1,4 @@
+
 var chart = Highcharts.chart('container', {
     chart: {
 		background:null,
@@ -25,10 +26,10 @@ var chart = Highcharts.chart('container', {
         enabled: false
     },
     tooltip: {
-        pointFormat: '人口总量: <b>{point.y:.1f} 百万</b>'
+        pointFormat: '欢迎度占比: <b>{point.y:.1f} %</b>'
     },
     series: [{
-        name: '总人口',
+        name: '欢迎度',
         data: [
             ['冰拿铁', 29.41],
             [ '意式黑椒牛排', 21.84],
