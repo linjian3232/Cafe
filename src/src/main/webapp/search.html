@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>订单查询</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>search</title>
+</head>
+	<link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap-table/1.15.4/bootstrap-table.min.css">
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+	<link rel="stylesheet" type="text/css" href="https://cdn.bootcss.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+	<script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.4.0/jquery.js"></script>
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap-table/1.15.4/bootstrap-table.min.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap-table/1.15.4/locale/bootstrap-table-zh-CN.min.js"></script>
+	<script type="text/javascript" src="js/search.js"></script>
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+	<link rel="shortcut icon" href="../Code/cafe/src/src/main/webapp/images/favicon.ico">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/fontawesome-all.css">
+	<link href="http://fonts.googleapis.com/css?family=Arizonia&amp;subset=latin-ext" rel="stylesheet">
+	<link href="http://fonts.googleapis.com/css?family=Timmana&amp;subset=telugu" rel="stylesheet">
+	<link href="http://fonts.googleapis.com/css?family=Bellefair&amp;subset=hebrew,latin-ext" rel="stylesheet">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<!-- logo -->
+			<h1>
+				<a class="navbar-brand" href="index.html">Coff-ood.
+					<span>Coffee And Food</span>
+				</a>
+			</h1>
+			<!-- //logo -->
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+			    aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="index.html">主页
+							<span class="sr-only">(current)</span>
+						</a>
+					</li>
+					<li class="nav-item mx-lg-4">
+						<a class="nav-link" href="about.html">关于我们</a>
+					</li>
+					<li class="nav-item dropdown mr-lg-4">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+						    aria-expanded="false">
+							页面
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="menu.html">菜单</a>
+							<a class="dropdown-item" href="index.html">服务</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="about.html">团队</a>
+						</div>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="gallery.html">展廊</a>
+					</li>
+					<li class="nav-item mx-lg-4  active">
+						<a class="nav-link" href="menu.html">菜单</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="order.html">订单 </a>
+					</li>
+					<li class="nav-item mx-lg-4">
+						<a class="nav-link" href="contact.html">个人信息</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="Signin.html">登陆</a>
+					</li>
+					<li class="nav-item  mx-lg-4">
+						<a class="nav-link" href="Signup.html">注册</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	<div class="banner-2">
+
+	</div>
+	<!-- breadcrumb -->
+	<nav aria-label="breadcrumb">
+		<ol class="breadcrumb">
+			<li class="breadcrumb-item">
+				<a href="index.html">主页</a>
+			</li>
+			<li class="breadcrumb-item active" aria-current="page">查询订单</li>
+		</ol>
+	</nav>
+<body>
+	请输入要查询的用户ID： <input type="text" name="UserID" placeholder="用户ID">
+	<button type="button" name="search_btn" onClick="search()">点击查询</button>
+	<br>
+	<table class="table table-bordered" name="order" id="order" onClick="search()">
+    <tr>
+        <th>订单编号</th>
+        <th>生成日期</th>
+        <th>订单状态</th>
+    </tr>
+ 	</table>
+</body>
+</html>
