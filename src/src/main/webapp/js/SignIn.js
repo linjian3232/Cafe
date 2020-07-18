@@ -12,7 +12,7 @@ function SignIn() {
 		return;
 	}
 	$.ajax({
-		url: "login.action",//这里是你接口的路径，记住http://不要忘记,localhost是你本地的地址，如果要请求别人的请将别人的ip地址替换，后面的addInfoPerson是接口名字。
+		url: "login.action?username="+username+"&pwd"+password,//这里是你接口的路径，记住http://不要忘记,localhost是你本地的地址，如果要请求别人的请将别人的ip地址替换，后面的addInfoPerson是接口名字。
 		type: "POST",//请求方式是get还是post,我这里用的是post
 		sync:true,
 		contentType: "json",
@@ -47,5 +47,5 @@ function setToken(token) {
 			expires:date,
 			path:'/'
 		});
-  		location.href="index.html";
+  		//location.href="index.html";
 }

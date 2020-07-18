@@ -37,9 +37,15 @@ public class userController {
 		//Token
 		String token=null;
 		//读取data
-		String text=new String(request.getInputStream().readAllBytes());
+			//JDK8 兼容修改
+		byte[] temp = new byte[1000];
+		
+		request.getInputStream().read(temp);
+		String text=new String(temp);
+		
 		//登录用户信息存储
 		UserLogin ul=om.readValue(text,UserLogin.class);
+		
 		//获取登录信息
 		String userid=userService.ValidateUser(ul.getUserName(), ul.getPassword());
 		System.out.println(userid);
@@ -52,5 +58,19 @@ public class userController {
 		re.put("token", token);
 		
 		return om.writeValueAsString(re);
+	}
+	
+	@RequestMapping("/register")
+	@ResponseBody
+	public String register(HttpServletRequest request) {
+		
+		request.getCookies();
+		//jackson工具
+		ObjectMapper om = new ObjectMapper();
+		//返回值
+		Map<String, Object> re = new HashMap<String, Object>();
+		
+		
+		return "";
 	}
 }
