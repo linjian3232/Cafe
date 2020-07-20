@@ -51,6 +51,10 @@ public class AdminServiceImpl implements AdminService
 		adminmapper.DropAdmin(AdminId);
 	}
 	
-	
+	@Override
+	public String ValidateAdmin(String adminName, String adminPwd) 
+	{
+		return adminmapper.ValidateAdmin(adminName,adminPwd);
+	}
 	
 }

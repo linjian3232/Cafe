@@ -56,13 +56,6 @@ public class UserServiceImpl implements UserService
 
 	public String ValidateUser(String UserName, String UserPwd) 
 	{
-		String userid=usermapper.ValidateUser(UserName, UserPwd);
-		
-		if(userid!="") {
-			return userid;
-		}
-		else {
-			return "";
-		}
+		return usermapper.ValidateUser(UserName, UserPwd);
 	}
 }

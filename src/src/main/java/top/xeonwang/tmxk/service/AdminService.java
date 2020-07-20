@@ -15,4 +15,7 @@ public void AddAdmin(String AdminId,String AdminName,String AdminPos);
 	
 	//删除管理员
 	public void DropAdmin(String AdminId);
+	
+	//验证管理员
+	public String ValidateAdmin(String adminName, String adminPwd);
 }

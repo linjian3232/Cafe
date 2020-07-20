@@ -4,29 +4,43 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class UserLogin {
 	@JsonProperty("username")
-	private String username;
+	private String userName;
 	@JsonProperty("password")
-	private String password;
-	
+	private String userPwd;
+	@JsonProperty("usertype")
+	private String userType;
 	public UserLogin() {
+		
+	}
+	
+	public UserLogin(String id,String pwd,String type) {
+		this.userName=id;
+		this.userPwd=pwd;
+		this.userType=type;
+	}
 
-	}
-	public UserLogin(String username,String password) {
-		this.username=username;
-		this.password=password;
+	public String getName() {
+		return userName;
 	}
 
-	public String getUserName() {
-		return username;
+	public void getName(String id) {
+		this.userName = id;
 	}
-	public void setUserName(String username) {
-		this.username = username;
+
+	public String getPwd() {
+		return userPwd;
 	}
-	public String getPassword() {
-		return password;
+
+	public void setPwd(String pwd) {
+		this.userPwd = pwd;
 	}
-	public void setPassword(String password) {
-		this.password = password;
+
+	public String getUserType() {
+		return userType;
+	}
+
+	public void setUserType(String userType) {
+		this.userType = userType;
 	}
 	
 }

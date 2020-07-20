@@ -45,17 +45,23 @@ public class userController {
 		
 		//登录用户信息存储
 		UserLogin ul=om.readValue(text,UserLogin.class);
-		
-		//获取登录信息
-		String userid=userService.ValidateUser(ul.getUserName(), ul.getPassword());
-		System.out.println(userid);
-		if(userid!=null) {
-			token=Token.sign( ul.getUserName(),userid );
+		String userid;
+		//获取登录信息——用户
+		if(ul.getUserType().equals("admin")) {
+			userid=adminService.ValidateAdmin(ul.getName(), ul.getPwd());
 		}
+		else {
+			userid=userService.ValidateUser(ul.getName(), ul.getPwd());
+		}
+		if(userid!=null)
+			token=Token.sign(ul.getName(), userid,ul.getUserType());
 		else {
 			token="";
 		}
+		
+		//获取登录信息——管理员
 		re.put("token", token);
+		re.put("userType", ul.getUserType());
 		
 		return om.writeValueAsString(re);
 	}
