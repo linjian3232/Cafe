@@ -1,6 +1,6 @@
 $('#table').bootstrapTable({
 		method:'get',
-    	url: 'testdata.json',        // 表格数据来源
+		url : 'testdata.json',        // 表格数据来源
 		checkbox:true,
 		striped: true, // 是否显示行间隔色
         pageNumber: 1, // 初始化加载第一页
