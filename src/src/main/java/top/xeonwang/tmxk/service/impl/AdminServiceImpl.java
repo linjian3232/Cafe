@@ -52,7 +52,7 @@ public class AdminServiceImpl implements AdminService
 	}
 	
 	@Override
-	public String ValidateAdmin(String adminName, String adminPwd) 
+	public Integer ValidateAdmin(String adminName, String adminPwd) 
 	{
 		return adminmapper.ValidateAdmin(adminName,adminPwd);
 	}

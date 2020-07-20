@@ -1,14 +1,19 @@
 package top.xeonwang.tmxk.dao;
 
+
+import java.util.Date;
+
 import org.apache.ibatis.annotations.Param;
+
 import org.springframework.stereotype.Repository;
+
+import top.xeonwang.tmxk.domain.User;
 @Repository
 public interface UserMapper
 {
 //	新增用户
-	public void AddUser(@Param("UserId") String UserId,@Param("UserName") String UserName,
-			@Param("UserPwd") String UserPwd,@Param("UserPhone") String UserPhone,
-			@Param("UserSex") String UserSex,@Param("UserEmail") String UserEmail);
+	public void AddUser(@Param("UserName") String UserName,@Param("UserPwd") String UserPwd,@Param("UserPhone") String UserPhone,
+			@Param("UserGender") String UserGender,@Param("UserEmail") String UserEmail,@Param("UserBirthday")Date UserBirthday);
 //	修改用户
 	public void UpdateName(@Param("UserId") String UserId,@Param("UserName") String UserName);
 	public void UpdatePwd(@Param("UserId") String UserId,@Param("UserPwd") String UserPwd);
@@ -21,6 +26,9 @@ public interface UserMapper
 //	删除用户
 	public void DropUser(@Param("UserId") String UserId);
 // 	验证用户
-	public String ValidateUser(@Param("UserName")String UserName, @Param("UserPwd")String UserPwd);
-	
+	public Integer ValidateUser(@Param("UserName")String UserName, @Param("UserPwd")String UserPwd);
+//  查找用户名
+	public String CheckUserName(@Param("UserName")String UserName);
+//	获取全部信息
+	public User getAllData(@Param("UserId")Integer UserId);
 }

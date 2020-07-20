@@ -9,6 +9,7 @@ public class UserLogin {
 	private String userPwd;
 	@JsonProperty("usertype")
 	private String userType;
+	
 	public UserLogin() {
 		
 	}

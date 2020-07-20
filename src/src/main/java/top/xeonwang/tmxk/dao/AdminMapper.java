@@ -19,5 +19,5 @@ public interface AdminMapper
 	public void DropAdmin(@Param("AdminId") String AdminId);
 	
 	//验证管理员
-	public String ValidateAdmin(@Param("AdminName")String AdminName, @Param("AdminPwd")String AdminPwd);
+	public Integer ValidateAdmin(@Param("AdminName")String AdminName, @Param("AdminPwd")String AdminPwd);
 }

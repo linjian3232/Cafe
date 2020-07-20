@@ -34,7 +34,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		WHERE adminid = #{AdminId}
 	</delete>
 
-	<select id="ValidateAdmin" resultType="String">
+	<select id="ValidateAdmin" resultType="Integer">
 		SELECT adminid	
 		FROM tmxk.ADMIN
 		where adminname = #{AdminName} and adminpwd= #{AdminPwd}

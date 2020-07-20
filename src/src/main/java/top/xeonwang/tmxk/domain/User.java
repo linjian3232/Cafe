@@ -1,13 +1,23 @@
 package top.xeonwang.tmxk.domain;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class User {
 
 	private String UserId;
+	
+	@JsonProperty("username")
 	private String UserName;
+	@JsonProperty("password")
 	private String UserPwd;
+	@JsonProperty("phone")
 	private String UserPhone;
-	private String UserSex;
+	@JsonProperty("gender")
+	private String userGender;
+	@JsonProperty("email")
 	private String UserEmail;
+	@JsonProperty("birthday")
+	private String UserBirthday;
 	
 	public String getUserId() {
 		return this.UserId;
@@ -33,17 +43,23 @@ public class User {
 	public void setUserPhone(String phone) {
 		this.UserPhone = phone;
 	}
-	public String getUserSex() {
-		return this.UserSex;
+	public String getUserGender() {
+		return this.userGender;
 	}
-	public void setUserSex(String sex) {
-		this.UserSex = sex;
+	public void setUserGender(String sex) {
+		this.userGender = sex;
 	}
 	public String getUserEmail() {
 		return this.UserEmail;
 	}
 	public void setUserEmail(String email) {
 		this.UserEmail = email;
+	}
+	public String getUserBirthday() {
+		return UserBirthday;
+	}
+	public void setUserBirthday(String userBirthday) {
+		UserBirthday = userBirthday;
 	}
 	
 }
