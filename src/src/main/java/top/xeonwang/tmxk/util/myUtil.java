@@ -20,4 +20,6 @@ public class myUtil {
 		}
 		return new String(temp);
 	}
+	
+//	public static Map<String, Object> uploadFile
 }

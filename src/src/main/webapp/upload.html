@@ -138,19 +138,19 @@
         <label class="control-label"
              for="goods_type">餐点类别</label> <select class="form-control"
              id="goods_type">
-          <option>
+          <option value="1">
             咖啡
           </option>
-          <option>
+          <option value="2">
             拼盘/松饼
           </option>
-          <option>
+          <option value="3">
             主食
           </option>
-          <option>
+          <option value="4">
             精品小吃
           </option>
-          <option>
+          <option value="5">
             冰乐
           </option>
         </select>
@@ -183,8 +183,7 @@
       <div class="form-group">
         <label class="control-label"
              for="uploadImage">餐点图片</label> 
-             <input class="file"
-             single
+             <input class="file-preview"
              id="uploadImage"
              name="uploadImage"
              type="file">
@@ -192,7 +191,7 @@
       <div class="form-group col-md-offset-9">
         <input class="btn btn-info center-block"
              name="publish"
-             onclick="publish()"
+             onclick="addMenu()"
              type="button"
              value="发布餐点">
       </div>
@@ -295,7 +294,8 @@
   <script src="js/jquery-2.2.3.min.js"></script> <!-- Default-JavaScript-File -->
   <script src="js/fileinput/fileinput.min.js"></script>
   <script src="js/bootstrap.js"></script> <!-- Necessary-JavaScript-File-For-Bootstrap -->
-   <!-- flexSlider-for-menu-section -->
+  <script src="js/jquery.cookie.js"></script>
+  <!-- flexSlider-for-menu-section -->
   <script src="js/jquery.flexisel.js"></script> <!-- //flexSlider-for-menu-section -->
   <!-- smooth scrolling -->
   <script src="js/SmoothScroll.min.js"></script> <!-- //smooth scrolling -->
@@ -305,7 +305,8 @@
    <script src="js/fileinput/theme.min.js"></script>
    <script src="js/fileinput/zh.js"></script>
   <script src="js/easing.js"></script> 
-  <script src="js/upload.js"></script> <!--  necessary snippets for few javascript files -->
+  <script src="js/upload.js"></script> 
+  <!--  necessary snippets for few javascript files -->
    <!-- //Js files -->
 </body>
 </html>
