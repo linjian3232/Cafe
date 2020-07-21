@@ -1,7 +1,5 @@
 package top.xeonwang.tmxk.service;
 
-import org.springframework.stereotype.Service;
-
 public interface AdminService
 {
 public void AddAdmin(String AdminId,String AdminName,String AdminPos);
@@ -15,4 +13,7 @@ public void AddAdmin(String AdminId,String AdminName,String AdminPos);
 	
 	//删除管理员
 	public void DropAdmin(String AdminId);
+	
+	//验证管理员
+	public Integer ValidateAdmin(String adminName, String adminPwd);
 }

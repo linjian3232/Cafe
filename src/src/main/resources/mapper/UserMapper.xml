@@ -15,43 +15,63 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 
 	<insert id = "AddUser">
-		INSERET INTO User(userid,username,userpwd,userphone,usersex,useremail)
-		Values(#{UserId},#{UserName},#{UserPwd},#{UserPhone},#{UserSex},#{UserEmail})	
+		INSERT INTO tmxk.User(username,userpwd,userphone,usergender,useremail,userbirthday)
+		Values(#{UserName},#{UserPwd},#{UserPhone},#{UserGender},#{UserEmail},#{UserBirthday,jdbcType=DATE})	
 	</insert>
 	
+	<select id="getAllData" resultType="top.xeonwang.tmxk.domain.User">
+		SELECT *
+		FROM tmxk.user
+		WHERE userid=#{UserId}
+	</select>
+	
 	<update id="UpdateName">
-	update USER
-	SET username = #{UserName} 
-	WHERE userid = #{UserId}
+		update USER
+		SET username = #{UserName} 
+		WHERE userid = #{UserId}
 	</update>
 	
 	<update id="UpdatePwd">
-	update USER
-	SET userpwd = #{UserPwd} 
-	WHERE userid = #{UserId}
+		update USER
+		SET userpwd = #{UserPwd} 
+		WHERE userid = #{UserId}
 	</update>
 	
 	<update id="UpdatePhone">
-	update USER
-	SET userphone = #{UserPhone} 
-	WHERE userid = #{UserId}
+		update USER
+		SET userphone = #{UserPhone} 
+		WHERE userid = #{UserId}
 	</update>
 	
 	<update id="UpdateSex">
-	update USER
-	SET usersex = #{UserSex} 
-	WHERE userid = #{UserId}
+		update USER
+		SET usersex = #{UserSex} 
+		WHERE userid = #{UserId}
 	</update>
 	
 	<update id="UpdateEmail">
-	update USER
-	SET useremail = #{UserEmail} 
-	WHERE userid = #{UserId}
+		update USER
+		SET useremail = #{UserEmail} 
+		WHERE userid = #{UserId}
 	</update>
 	
 	<delete id="DropUser">
-	DELETE FROM USER	
-	WHERE userid = #{UserId}
+		DELETE FROM USER	
+		WHERE userid = #{UserId}
 	</delete>
-
+	
+	<select id="ValidateUser" resultType="Integer">
+		SELECT userid	
+		FROM
+		tmxk.USER
+		where
+		username = #{UserName} and userpwd = #{UserPwd}
+	</select>
+	
+	<select id="CheckUserName" resultType="String">
+		SELECT username
+		FROM tmxk.USER
+		WHERE username = #{UserName}
+	</select>
+	
 </mapper>

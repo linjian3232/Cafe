@@ -7,10 +7,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<!-- 根据姓名查询对象 -->
 	<select id="FindByName" resultType="String">
 		SELECT adminid	
-		FROM
-		tmxk.ADMIN
-		where
-		adminname = #{AdminName}
+		FROM tmxk.ADMIN
+		where adminname = #{AdminName}
 	</select>
 
 	<insert id = "AddAdmin">
@@ -36,4 +34,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		WHERE adminid = #{AdminId}
 	</delete>
 
+	<select id="ValidateAdmin" resultType="Integer">
+		SELECT adminid	
+		FROM tmxk.ADMIN
+		where adminname = #{AdminName} and adminpwd= #{AdminPwd}
+	</select>
+	
 </mapper>

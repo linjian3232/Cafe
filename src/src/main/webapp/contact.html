@@ -2,11 +2,7 @@
 <html lang="zxx">
 
 <head>
-	<style type="text/css">
-		#head{
-			background-image: linear-gradient(to top,#fbb8ac,#e6e2c3);
-		}
-		</style>
+	
 	<title>个人信息</title>
 	<!-- Meta tag Keywords -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -86,7 +82,7 @@
 						<a class="nav-link" href="contact.html">个人信息</a>
 					</li>
 					<li class="nav-item  mx-lg-3" id="btnSignout" >
-						<a class="nav-link" href="Signup.html">注销</a>
+						<a class="nav-link" href="javascript:void(0);" onclick="logoutAndJump()">注销</a>
 					</li>
 					
 				</ul>
@@ -263,6 +259,8 @@
 	<!-- Js files -->
 	<!-- JavaScript -->
 	<script src="js/jquery-2.2.3.min.js"></script>
+	<script src="js/jquery.cookie.js"></script>
+	<script src="js/cookie.js"></script>
 	<!-- Default-JavaScript-File -->
 	<script src="js/bootstrap.js"></script>
 	<!-- Necessary-JavaScript-File-For-Bootstrap -->
@@ -277,7 +275,8 @@
 	<script src="js/easing.js"></script>
 	<!--  necessary snippets for few javascript files -->
 	<script src="js/coffee.js"></script>
-
+	<script src="js/logout.js"></script>
+	<script src="js/contact.js"></script>
 	<!-- //Js files -->
 
 </body>

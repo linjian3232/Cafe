@@ -39,7 +39,6 @@
 </head>
 
 <body>
-	<script src="js/menu.js"></script>
 	<!-- header -->
 	<div class="header">
 		<!-- navigation -->
@@ -84,7 +83,7 @@
 						<a class="nav-link" href="contact.html">个人信息</a>
 					</li>
 					<li class="nav-item  mx-lg-3" id="btnSignout" hidden="true">
-						<a class="nav-link" href="Signup.html">注销</a>
+						<a class="nav-link" href="javascript:void(0);" onclick="logout()">注销</a>
 					</li>
 					
 				</ul>
@@ -352,7 +351,13 @@
 		});
 	
 	</script>
+
 	<script src="js/jquery.flexisel.js"></script>
+	
+	<script src="js/jquery.cookie.js"></script>
+	<script src="js/cookie.js"></script>
+	
+
 	<!-- //flexSlider-for-menu-section -->
 
 	<!-- smooth scrolling -->
@@ -364,9 +369,10 @@
 	<!-- easing -->
 	<script src="js/easing.js"></script>
 	<!--  necessary snippets for few javascript files -->
-
+	<script src="js/menu.js"></script>
 	<script src="js/coffee.js"></script>
-
+	
+	<script src="js/logout.js"></script>
 	<!-- //Js files -->
 
 </body>

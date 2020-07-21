@@ -1,11 +1,15 @@
 package top.xeonwang.tmxk.service;
 
-import org.springframework.stereotype.Service;
+import java.text.ParseException;
+
+import top.xeonwang.tmxk.domain.User;
+
 
 public interface UserService
 {
 //	增加用户
-	public void AddUser(String UserId,String UserName,String UserPwd,String UserPhone,String UserSex,String UserEmail);
+	public void AddUser(String UserName,String UserPwd,String UserPhone,String UserGender,String UserEmail,String UserBirthday) 
+			throws ParseException;
 //	修改用户
 	public void UpdateName(String UserId,String UserName);
 	public void UpdatePwd(String UserId,String UserPwd);
@@ -17,6 +21,10 @@ public interface UserService
 //	删除用户
 	public void DropUser(String UserId);
 	
-	
-	
+// 	验证用户
+	public Integer ValidateUser(String UserName, String UserPwd);
+//	验证用户名
+	public String CheckUserName(String UserName);
+// 	返回所有信息
+	public User getAllData(Integer UserId);
 }
