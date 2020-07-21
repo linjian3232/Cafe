@@ -4,6 +4,19 @@
 	left:300px;
 	
 }
+#head{
+	width:auto;
+	height: 700px;
+}
+#form{
+	width:300px; 
+	height:160px;
+	position:relative;
+	left:50%;
+	top:50%;
+	margin-left:-150px;
+	margin-top:100px; 
+}
 #con1{
 	position:absolute;
 	top:500px;
@@ -158,7 +171,7 @@ nav.navbar.navbar-expand-lg.navbar-light.bg-light {
     margin: 1em .5em 0;
     letter-spacing: 1px;
 }
-
+.lb{float: left;line-height:50px;}
 .navbar-light .navbar-nav .show>.nav-link,
 .navbar-light .navbar-nav .active>.nav-link,
 .navbar-light .navbar-nav .nav-link.show,
@@ -582,7 +595,19 @@ ol.breadcrumb li {
 /* //team */
 
 /*-- contact --*/
-
+.contact-us1-bottom{
+	width: 500px;
+	height: 300px;
+	margin: 0 auto;
+	position:absolute;
+	left: 50%;
+	top: 50%;
+	margin-left:-150px;
+	margin-top:150px;
+	border:1px; 
+	
+	align:center; 
+}
 
 .contact-us1-bottom input[type="text"], .contact-us1-bottom input[type="email"], .contact-us1-bottom textarea {
     outline: none;
