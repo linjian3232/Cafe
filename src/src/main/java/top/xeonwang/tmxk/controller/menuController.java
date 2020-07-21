@@ -1,6 +1,10 @@
 package top.xeonwang.tmxk.controller;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
@@ -8,6 +12,8 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import top.xeonwang.tmxk.domain.Food;
 import top.xeonwang.tmxk.service.FoodService;
@@ -51,7 +57,45 @@ public class menuController {
 		return "OK";
 	}
 	
-	
+	@RequestMapping("/uploadPic")
+	@ResponseBody
+	public String uploadPic(HttpServletRequest request)
+	{
+
+        MultipartHttpServletRequest multipartRequest = (MultipartHttpServletRequest) request;
+        List<MultipartFile> fileList = multipartRequest.getFiles("uploadImage");
+        for (MultipartFile item : fileList) {
+            String fileName = "";        //当前上传文件全名称
+            String fileType = "";        //当前上传文件类型
+            String saveFileName = "";    //保存到服务器目录的文件名称
+            String reportAddr = "";      //保存到服务器目录的文件全路径
+            try {
+                fileName = item.getOriginalFilename();
+                fileType = item.getContentType();
+            }catch (Exception e) {
+
+			}
+            System.out.println(fileName+" "+fileType);
+            System.out.println(request.getSession().getServletContext().getRealPath("/"));
+            
+            File savedFile = new File("", saveFileName);
+            try {
+				item.transferTo(savedFile);
+			} catch (IllegalStateException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+        }
+       
+		System.out.println("success");
+		System.out.println(request.getContentType());
+
+		return "{}";
+	}
 	
 	
 	
