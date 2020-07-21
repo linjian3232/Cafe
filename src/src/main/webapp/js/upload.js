@@ -52,7 +52,7 @@ function addMenu() {
     $.ajax({
         url: "addMenuList.action",
         type: "POST",
-        contentType: "json",
+        contentType: "text/json,charset=utf-8",
         dataType: "json",
         data: JSON.stringify({
             "foodname": $("#goods_name").val(),
@@ -60,14 +60,15 @@ function addMenu() {
             "foodstock": $("#goods_stock").val(),
             "foodprice": $("#goods_price").val(),
             "foodunit": $("#goods_unit").val(),
-            "foodimg" : imgName,
+            "foodimg" : encodeURI(imgName),
         }),
         success: function (data) {
-            if (data.message == "OK")
+            if (data.ok == "true")
                 alert("上传成功！");
+            else
+                alert("菜品重复！上传失败");
         },
         error: function (e) {
-            alert("出错");
             alert(e.responseText);
         },
     })

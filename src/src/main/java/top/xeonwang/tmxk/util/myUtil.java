@@ -1,6 +1,9 @@
 package top.xeonwang.tmxk.util;
 
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.nio.charset.Charset;
+import java.util.Scanner;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -14,6 +17,7 @@ public class myUtil {
 		byte[] temp=new byte[1000];
 		try {
 			request.getInputStream().read(temp);
+			System.out.println(new String(temp,Charset.forName("UTF-8")));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

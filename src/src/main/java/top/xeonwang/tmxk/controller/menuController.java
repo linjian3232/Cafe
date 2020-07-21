@@ -1,7 +1,10 @@
 package top.xeonwang.tmxk.controller;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -17,13 +20,18 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
+import com.alibaba.fastjson.JSONArray;
+import com.alibaba.fastjson.JSONObject;
+import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import top.xeonwang.tmxk.domain.Food;
 import top.xeonwang.tmxk.service.FoodService;
 import top.xeonwang.tmxk.service.UserService;
 import top.xeonwang.tmxk.util.GetRandomId;
+import top.xeonwang.tmxk.util.myUtil;
 
 
 @Controller
@@ -35,25 +43,43 @@ public class menuController {
 	//获取菜单
 	@RequestMapping("/getMenuList")
 	@ResponseBody
-	public ArrayList<Food> getMenu() {
+	public String getMenu() throws JsonProcessingException {
 		System.out.println("getMenu");
-		if(foodservice.GetAll().size()==0) {
+		if(foodservice.GetAll()==null) {
 			System.out.println("false");
 			return null;
 		}
-		return foodservice.GetAll();
+//		ObjectMapper om=new ObjectMapper();
+//		JSONArray ja=new JSONArray();
+		
+		return JSONObject.toJSONString(foodservice.GetAll());
 	}
 	
 	//新增菜单
 	@RequestMapping("/addMenuList")
 	@ResponseBody
-	public String addMenu(HttpServletRequest request)
+	public String addMenu(HttpServletRequest request) throws IOException
 	{
+		//jackson工具
+		ObjectMapper om = new ObjectMapper();
+		//返回值
+		request.setCharacterEncoding("UTF-8");
+		Map<String, Object> re = new HashMap<String, Object>();
+		String text=new String();
+		System.out.println(text);
 		
+		Food food=om.readValue(myUtil.readData(request), Food.class);
 		
+		if(foodservice.AddFood(food.getFoodName(), food.getFoodType(), 
+				Long.valueOf(food.getFoodStock()), food.getFoodUnit(), 
+				food.getFoodImg(),Double.valueOf(food.getFoodPrice()))) {
+			re.put("ok","true");
+		}
+		else {
+			re.put("ok", "false");
+		}
 		
-		
-		return "OK";
+		return om.writeValueAsString(re);
 	}
 	
 	@RequestMapping("/uploadPic")
