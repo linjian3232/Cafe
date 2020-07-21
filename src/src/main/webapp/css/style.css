@@ -7,7 +7,11 @@
 }
 #head{
 	width:auto;
-	height: 700px;
+	
+}
+#head1{
+	width:auto;
+	height:700px;
 }
 #form{
 	width:300px; 
