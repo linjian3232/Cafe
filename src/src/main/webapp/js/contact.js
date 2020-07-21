@@ -9,14 +9,14 @@ $(document).ready(function(){
         success:function(result){
 			console.log(result.ok);
             if(result.ok!=null&&result.ok=="false"){
- //               location.href="index.html";
+                location.href="index.html";
                 return;
             }
             
             
         },
         fail:function(){
-//            location.href="index.html";
+            location.href="index.html";
         }
     })
 });

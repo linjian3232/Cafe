@@ -10,8 +10,10 @@ function onNumberChange(){
     console.log(total);
 }
 function del(node){
-    if(confirm("确认从购物车中移除该商品？"))
+    if(confirm("确认从购物车中移除该商品？")){
+        shop.removeProduct(node.id);
         $(node).remove();
+    }
 }
 /**增加一行购物车数据
  * @param foodId
@@ -75,9 +77,10 @@ shop.addProduct = function (id, name,img, price, count) {
  
 shop.removeProduct = function (id) {
     var carInfo = shop.readData();
-    for (var i in carInfo) {
-        if (i == id) {
-            carInfo[i] = undefined;
+    for(var i=0;i<carInfo.length;i++){
+        if(carInfo[i].id==id){
+            carInfo.splice(i,1);
+            break;
         }
     }
     shop.saveData(carInfo);
