@@ -1,7 +1,37 @@
+var data = [];
+data = [
+	{
+		"orderid":1,
+		"ordertime":'0202',
+		"orderstatus":"buying"
+	},
+	{
+		"orderid":1,
+		"ordertime":'0202',
+		"orderstatus":"buying"
+	},
+	{
+		"orderid":1,
+		"ordertime":'0202',
+		"orderstatus":"buying"
+	}
+]
+function test()
+		{
+			var ht = '';
+  			for(var i=0;i<data.length;i++){//循环json对象，拼接tr,td的html
+				ht = ht+'<tr>';
+				ht = ht + '<th>' + data[i].orderid + '</th>';
+				ht = ht + '<th>' + data[i].ordertime + '</th>';
+				ht = ht + '<th>' + data[i].orderstatus + '</th>';
+				ht = ht+'</tr>';
+			}
+  $('#order').append(ht);
+		}
+
 function search(){
-	alert("1111");
 	$.ajax({
-		url:"",
+		url:"searchOrder.action",
 		method:"POST",
 		dataType:"text",
 		data:{
@@ -10,11 +40,15 @@ function search(){
 		success:
 		function(data)
 		{
-			$.each(data.data,function(index,item){
-                var tr;
-				tr='<td>'+item.orderid+'</td>'+'<td>'+item.ordertime+'</td>'+'<td>'+item.orderstatus+'</td>';
-                    $("#order").append('<tr>'+tr+'</tr>')
-                })
+			var ht = '';
+  			for(var i=0;i<data.length;i++){//循环json对象，拼接tr,td的html
+				ht = ht+'<tr>';
+				ht = ht + '<th>' + data[i].orderid + '</th>';
+				ht = ht + '<th>' + data[i].ordertime + '</th>';
+				ht = ht + '<th>' + data[i].orderstatus + '</th>';
+				ht = ht+'</tr>';
+			}
+  $('#order').append(ht);
 		}
 	}
 	)
