@@ -1,6 +1,54 @@
+var data = [];
+data = [
+  {
+    "UserID":1,
+    "UserName": "玛利亚凯莉",
+    "UserPwd": "19",
+    "UserSex": 0,
+    "UserPhone": "1567865475",
+    "UserEmail": "109983@qq.com"
+  },
+  {
+    "UserID":2,
+    "UserName": "亚丽安娜",
+    "UserPwd": "20",
+    "UserSex": 0,
+    "UserPhone": "1567865475",
+    "UserEmail": "10998345@qq.com"
+  },
+  {
+    "UserID": 3,
+    "UserName": "拉娜德芮",
+    "UserPwd": "19",
+    "UserSex": 0,
+    "UserPhone": "1567865475",
+    "UserEmail": "1099834577@qq.com"
+  },
+  {
+    "UserID": 4,
+    "UserName": "凯蒂佩瑞",
+    "UserPwd": "19",
+    "UserSex": 0,
+    "UserPhone": "1567865475",
+    "UserEmail": "109983@qq.com"
+  }
+];
+$(document).ready(function(){
+	$.ajax({
+		url:"getAllUser.action",
+		type:"POST",
+		contentType:"json",
+		dataType:"json",
+		data:"",
+		xhrFields: { withCredentials: true },
+		success:function(result){
+			alert("success");
+		}
+	})
+})
 $('#table').bootstrapTable({
 		method:'get',
-		url : 'testdata.json',        // 表格数据来源
+		data:data,    // 表格数据来源
 		checkbox:true,
 		striped: true, // 是否显示行间隔色
         pageNumber: 1, // 初始化加载第一页
@@ -19,11 +67,7 @@ $('#table').bootstrapTable({
 					width : 110,
                     field: 'UserID',
              },
-			{
-                    title:'id',
-                    field: 'id',
-					visible:false
-             },  {
+			  {
                     title: '用户姓名',
 					width : 110,
                     field: 'UserName',
@@ -54,36 +98,40 @@ $('#table').bootstrapTable({
                 return value == 0 ? "男" : "女";
           }
 		//点击新增发生的事件
-		$("#add_table_btn").click(function () {
+		$("#add_table_btn").click(function () 
+			{
 			$("#myModalLabel").text("新增");
 			$('#myModal').modal();
-			$.ajax
-			(
+			$("#btn_submit").click(function()
 			{
-				url:"url",
+			$.ajax
+			({
+				url:"addNewUser.action",
 				type:"POST",
 				dataType:"json",
+				contentType:"json",
 				data:{
 					"UserID":$("#UserID".value),
 					"UserName":$("#UserName".value),
 					"UserPwd":$("#UserPwd".value),
 					"UserSex":$("#UserSex".value),
 					"UserPhone":$("#UserPhone".value),
-					"UserEmail":$("#UserEmail".value),
+					"UserEmail":$("#UserEmail".value)
 				},
 				success:
-				function(data)
+				function(result)
 				{
-					
+					$('#table').bootstrapTable('refresh');
 				}
-			});
-			
-		});
-		
+			})
+		})
+});
+
 		//点击编辑发生的事件
 		$("#edit_table_btn").click(function () {
-		var rows = $("#table").bootstrapTable('getSelections'); // 获得要删除的数据
-        if(rows.length == 0) { 
+		var rows = $("#table").bootstrapTable('getSelections'); 
+        if(rows.length == 0)
+		{ 
         alert("请先选择要编辑的记录!");
         return;
         } 
@@ -91,8 +139,8 @@ $('#table').bootstrapTable({
 			{
 				$("#myModalLabel").text("编辑");
 				$('#myModal').modal();
-				var id = rows[0].id+1 ;
-				var originid = rows[0].UserID;
+				var id ;
+				id = rows[0].UserID ;
 				var uid = document.getElementById("table").rows[id].cells[1].innerText;
 				var uname = document.getElementById("table").rows[id].cells[2].innerText;
 				var upassword = document.getElementById("table").rows[id].cells[3].innerText;
@@ -105,29 +153,45 @@ $('#table').bootstrapTable({
 				$('#UserSex').val(usex);
 				$('#UserPhone').val(uphone);
 				$('#UserEmail').val(uemail);
-				$.ajax
-			(
-			{
-				url:"url",
-				type:"POST",
-				dataType:"json",
-				data:{
-					"originID":originid,
-					"UserID":$("#UserID".value),
-					"UserName":$("#UserName".value),
-					"UserPwd":$("#UserPwd".value),
-					"UserSex":$("#UserSex".value),
-					"UserPhone":$("#UserPhone".value),
-					"UserEmail":$("#UserEmail".value)
-				},
-				success:
-				function(data)
-				{
-					
-				}
-			});
+				$('#btn_submit').click(function(){
+					alert(id);
+					document.getElementById("table").rows[id].cells[1].innerText = $('#UserID').val();
+					document.getElementById("table").rows[id].cells[2].innerText = $('#UserName').val();
+					document.getElementById("table").rows[id].cells[3].innerText = $('#UserPwd').val();
+					document.getElementById("table").rows[id].cells[4].innerText = $('#UserSex').val();
+					document.getElementById("table").rows[id].cells[5].innerText = $('#UserPhone').val();
+					document.getElementById("table").rows[id].cells[6].innerText = $('#UserEmail').val();
+				})
 			}
 	})
+		function submit(){
+			var tabLen = document.getElementById("table");
+            var jsonT = "[";
+            for (var i = 1; i < tabLen.rows.length; i++) {
+                    jsonT += 
+					'{"UserID":' + tabLen.rows[i].cells[1].innerHTML + 
+						',"UserName":"' + tabLen.rows[i].cells[2].innerHTML +
+						'","UserPwd":"' + tabLen.rows[i].cells[3].innerHTML +
+						'","UserSex":"' + tabLen.rows[i].cells[4].innerHTML + 
+						'","UserPhone":"' + tabLen.rows[i].cells[5].innerHTML +
+						'","UserEmail":"' + tabLen.rows[i].cells[6].innerHTML
+						+ '"},'
+            }
+            jsonT= jsonT.substr(0, jsonT.length - 1);
+            jsonT += "]";
+			
+			$.ajax({
+				url:"changeUserData.action",
+				contentType:"json",
+				dataType:"json",
+				data:jsonT,
+				type:"POST",
+				success:function(result)
+				{
+					$('#table').bootstrapTable('refresh');
+				}
+			})
+		}
 			//点击删除发生的事件
 			$("#delete_table_btn").on("click", function() {
                 if(!confirm("是否确认删除？"))
@@ -142,14 +206,15 @@ $('#table').bootstrapTable({
                         ids.push(this.UserID); // cid为获得到的整条数据中的一列
                     });
                     //后端删除的方法
-                    deleteMs(ids)
+					
+                    deleteMs(ids);
                 }
             })
 
             // 删除访客,删除数据库内容，刷新表格即可删除
             function deleteMs(ids) {
                 $.ajax({
-                    url: basePath + "/caller/dels?ids=" + ids,//需要修改URL
+                    url: "deleteUser.action",//需要修改URL
                     dataType: "json",
 					type : "POST",
 					data : {
@@ -158,11 +223,8 @@ $('#table').bootstrapTable({
                     success: function(data) {
                         if(data.message == "OK") {
                             alert("删除成功")
-                            $('#mytab').bootstrapTable('refresh', {
-                                url: basePath + '/caller/list'		//需要修改URL
-                            });
+                            $('#table').bootstrapTable('refresh');
                         }
                     }
                 });
             }
-            // 编辑访客
